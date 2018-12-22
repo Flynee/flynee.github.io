@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/Flynee">
-  <title>test | 魔宫</title>
+  <title>springboot | 魔宫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="test1more test2&amp;quot;more&amp;quot; test3&amp;apos;more&amp;apos; test4more test5more test6“more” 1more">
+  <meta name="description" content="SpringBoot对静态文件的映射规则1234567891011121314151617public void addResourceHandlers(ResourceHandlerRegistry registry) &amp;#123;            if (!this.resourceProperties.isAddMappings()) &amp;#123;                log">
+<meta name="keywords" content="springboot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="https://github.com/Flynee/2018/12/22/test/index.html">
+<meta property="og:title" content="springboot">
+<meta property="og:url" content="https://github.com/Flynee/2018/12/22/webjar&静态资源的映射规则/index.html">
 <meta property="og:site_name" content="魔宫">
-<meta property="og:description" content="test1more test2&amp;quot;more&amp;quot; test3&amp;apos;more&amp;apos; test4more test5more test6“more” 1more">
+<meta property="og:description" content="SpringBoot对静态文件的映射规则1234567891011121314151617public void addResourceHandlers(ResourceHandlerRegistry registry) &amp;#123;            if (!this.resourceProperties.isAddMappings()) &amp;#123;                log">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-22T08:02:49.323Z">
+<meta property="og:updated_time" content="2018-12-22T08:08:11.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="test1more test2&amp;quot;more&amp;quot; test3&amp;apos;more&amp;apos; test4more test5more test6“more” 1more">
+<meta name="twitter:title" content="springboot">
+<meta name="twitter:description" content="SpringBoot对静态文件的映射规则1234567891011121314151617public void addResourceHandlers(ResourceHandlerRegistry registry) &amp;#123;            if (!this.resourceProperties.isAddMappings()) &amp;#123;                log">
   
     <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
   
@@ -142,34 +143,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-test" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-webjar&amp;静态资源的映射规则" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      test
+      springboot
     </h1>
   
 
         
-        <a href="/2018/12/22/test/" class="archive-article-date">
-  	<time datetime="2018-12-22T07:41:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
+        <a href="/2018/12/22/webjar&静态资源的映射规则/" class="archive-article-date">
+  	<time datetime="2018-12-22T08:06:23.900Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="test1"><a href="#test1" class="headerlink" title="test1"></a>test1</h3><pre><code>more
-</code></pre><h3 id="test2"><a href="#test2" class="headerlink" title="test2"></a>test2</h3><pre><code>&quot;more&quot;
-</code></pre><h3 id="test3"><a href="#test3" class="headerlink" title="test3"></a>test3</h3><pre><code>&apos;more&apos;
-</code></pre><h3 id="test4"><a href="#test4" class="headerlink" title="test4"></a>test4</h3><p>more</p>
-<h3 id="test5"><a href="#test5" class="headerlink" title="test5"></a>test5</h3><p>more</p>
-<h3 id="test6"><a href="#test6" class="headerlink" title="test6"></a>test6</h3><p>“more”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">more</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+        <h3 id="SpringBoot对静态文件的映射规则"><a href="#SpringBoot对静态文件的映射规则" class="headerlink" title="SpringBoot对静态文件的映射规则"></a>SpringBoot对静态文件的映射规则</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addResourceHandlers</span><span class="params">(ResourceHandlerRegistry registry)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!<span class="keyword">this</span>.resourceProperties.isAddMappings()) &#123;</span><br><span class="line">                logger.debug(<span class="string">"Default resource handling disabled"</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                Duration cachePeriod = <span class="keyword">this</span>.resourceProperties.getCache().getPeriod();</span><br><span class="line">                CacheControl cacheControl = <span class="keyword">this</span>.resourceProperties.getCache().getCachecontrol().toHttpCacheControl();</span><br><span class="line">                <span class="keyword">if</span> (!registry.hasMappingForPattern(<span class="string">"/webjars/**"</span>)) &#123;</span><br><span class="line">                    <span class="keyword">this</span>.customizeResourceHandlerRegistration(registry.addResourceHandler(<span class="keyword">new</span> String[]&#123;<span class="string">"/webjars/**"</span>&#125;).addResourceLocations(<span class="keyword">new</span> String[]&#123;<span class="string">"classpath:/META-INF/resources/webjars/"</span>&#125;).setCachePeriod(<span class="keyword">this</span>.getSeconds(cachePeriod)).setCacheControl(cacheControl));</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                String staticPathPattern = <span class="keyword">this</span>.mvcProperties.getStaticPathPattern();</span><br><span class="line">                <span class="keyword">if</span> (!registry.hasMappingForPattern(staticPathPattern)) &#123;</span><br><span class="line">                    <span class="keyword">this</span>.customizeResourceHandlerRegistration(registry.addResourceHandler(<span class="keyword">new</span> String[]&#123;staticPathPattern&#125;).addResourceLocations(getResourceLocations(<span class="keyword">this</span>.resourceProperties.getStaticLocations())).setCachePeriod(<span class="keyword">this</span>.getSeconds(cachePeriod)).setCacheControl(cacheControl));</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>所有/webjars/**,都去classpath:/META-INF/resources/webjars/找资源<br>webjars:以jar包方式引入静态资源  </li>
+<li>“/**”访问当前项目的任何资源（静态资源的文件夹）  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&quot;classpath:/META-INF/resources/&quot;</span><br><span class="line">&quot;classpath:/resources/&quot;</span><br><span class="line">&quot;classpath:/static/&quot;</span><br><span class="line">&quot;/&quot;:当前项目的根路径</span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">``` java</span><br><span class="line"></span><br><span class="line">@ConfigurationProperties(</span><br><span class="line">    prefix = &quot;spring.resources&quot;,</span><br><span class="line">    ignoreUnknownFields = false</span><br><span class="line">)</span><br><span class="line">public class ResourceProperties &#123;</span><br><span class="line">//可以设置和静态资源有关的参数</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">3. 欢迎页：静态资源文件夹下的所有index.html页面，被&quot;/**&quot;映射  </span><br><span class="line">4. 所有的**/favicon.ico都在静态资源文件夹下找</span><br><span class="line">5. 自定义静态文件位置(多个路径之间用逗号分隔)</span><br><span class="line">``` properties</span><br><span class="line">spring.resources.static-locations=classpath:/hello/,classpath:/mystatic/</span><br></pre></td></tr></table></figure></li>
+</ol>
 
       
 
@@ -178,6 +176,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -228,7 +237,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Flynee/2018/12/22/test/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Flynee/2018/12/22/webjar&静态资源的映射规则/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -242,8 +251,17 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/12/22/引入thymeleaf/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          springboot
+        
+      </div>
+    </a>
   
-    <a href="/2018/12/22/SpringBoot/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2018/12/22/SpringBoot自动配置原理/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">springboot</div>
       <i class="icon-circle-right"></i>
     </a>
