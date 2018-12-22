@@ -1,25 +1,33 @@
+<html>
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="https://github.com/Flynee">
-  <title>Archives: 2018 | 魔宫</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://flynee.github.com">
+  <title>HQL数据查询 | Flynee-Everything comes from love</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="魔宫">
-<meta property="og:url" content="https://github.com/Flynee/archives/2018/index.html">
-<meta property="og:site_name" content="魔宫">
-<meta property="og:locale" content="default">
+  <meta name="description" content="HQL定义Hibernate Query Language,Hibernate 查询语言HQL是面向对象的查询语言（HQL查询的是映射配置的持久化类及其属性，SQL查询的是数据库表）Hibernate框架会将HQL语句解析成SQL语句，完成最终的查询  Query接口简介org.hibernate.Query    Query接口定义由执行查询的方法 Query接口支持方法链编程风格，使得程序代码">
+<meta name="keywords" content="java,HQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HQL数据查询">
+<meta property="og:url" content="http://flynee.github.com/2018/05/01/HQL数据查询/index.html">
+<meta property="og:site_name" content="Flynee-Everything comes from love">
+<meta property="og:description" content="HQL定义Hibernate Query Language,Hibernate 查询语言HQL是面向对象的查询语言（HQL查询的是映射配置的持久化类及其属性，SQL查询的是数据库表）Hibernate框架会将HQL语句解析成SQL语句，完成最终的查询  Query接口简介org.hibernate.Query    Query接口定义由执行查询的方法 Query接口支持方法链编程风格，使得程序代码">
+<meta property="og:image" content="https://i.imgur.com/nMFhVJI.png">
+<meta property="og:image" content="https://i.imgur.com/PkNAwhb.png">
+<meta property="og:updated_time" content="2018-05-29T07:48:29.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="魔宫">
+<meta name="twitter:title" content="HQL数据查询">
+<meta name="twitter:description" content="HQL定义Hibernate Query Language,Hibernate 查询语言HQL是面向对象的查询语言（HQL查询的是映射配置的持久化类及其属性，SQL查询的是数据库表）Hibernate框架会将HQL语句解析成SQL语句，完成最终的查询  Query接口简介org.hibernate.Query    Query接口定义由执行查询的方法 Query接口支持方法链编程风格，使得程序代码">
+<meta name="twitter:image" content="https://i.imgur.com/nMFhVJI.png">
   
-    <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Flynee-Everything comes from love" type="application/atom+xml">
   
   
-    <link rel="icon" href="https://avatars0.githubusercontent.com/u/26314471?s=460&v=4">
+    <link rel="icon" href="/favicon_imgs/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -33,7 +41,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -46,10 +54,10 @@
 			<img src="https://avatars0.githubusercontent.com/u/26314471?s=460&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">大魔王</a></h1>
+		  <h1 class="header-author"><a href="/">Flynee</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">情感专家，情感顾问，全球绿帽子协会主席</p>
+		<p class="header-subtitle">Love you,love the world</p>
 		
 
 		<nav class="header-menu">
@@ -57,7 +65,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/sanwen/">随笔</a></li>
+				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -65,6 +73,8 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
     			
             
     			
@@ -76,6 +86,8 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/Flynee" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="https://weibo.com/u/6055318960?refer_flag=1001030102_&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
 		        
 			</div>
 		</nav>
@@ -96,10 +108,10 @@
 				<img src="https://avatars0.githubusercontent.com/u/26314471?s=460&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">大魔王</h1>
+			  <h1 class="header-author js-header-author">Flynee</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>情感专家，情感顾问，全球绿帽子协会主席<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Love you,love the world<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -114,6 +126,8 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Flynee" title="github"><i class="icon-github"></i></a>
 			        
+						<a class="weibo" target="_blank" href="https://weibo.com/u/6055318960?refer_flag=1001030102_&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -123,7 +137,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/sanwen/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -138,107 +152,309 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-HQL数据查询" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/SpringBoot/" class="archive-article-date">
-  	<time datetime="2018-12-22T05:53:46.765Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/SpringBoot/">eclipse和idea对应的快捷键</a>
+    <h1 class="article-title" itemprop="name">
+      HQL数据查询
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/Eclipse与Idea快捷键的区别/" class="archive-article-date">
-  	<time datetime="2018-12-22T05:53:46.747Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
+        
+        <a href="/2018/05/01/HQL数据查询/" class="archive-article-date">
+  	<time datetime="2018-05-01T07:42:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/Eclipse与Idea快捷键的区别/">eclipse和idea对应的快捷键</a>
-    </h1>
-  
+        
 
-        <div class="article-info info-on-right">
-          
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HQL定义"><a href="#HQL定义" class="headerlink" title="HQL定义"></a>HQL定义</h3><p>Hibernate Query Language,Hibernate 查询语言<br>HQL是面向对象的查询语言（<font color="red">HQL查询的是映射配置的持久化类及其属性，SQL查询的是数据库表</font>）<br>Hibernate框架会将HQL语句解析成SQL语句，完成最终的查询<br><img src="https://i.imgur.com/nMFhVJI.png" alt=""> </p>
+<h3 id="Query接口简介"><a href="#Query接口简介" class="headerlink" title="Query接口简介"></a>Query接口简介</h3><p><strong>org.hibernate.Query</strong>  </p>
+<ol>
+<li>Query接口定义由执行查询的方法</li>
+<li>Query接口支持方法链编程风格，使得程序代码更为简洁<br><font color="red">方法链（Method Chaining），也被称为命名参数法，是在面向对象的编程语言中调用的调用多个方法的通用语法。每一个方法返回一个对象，<br>在一个单一的声明里，方法链省去了中间变量的需要。</font><br><strong>Query实例的创建</strong>  </li>
+<li>Session的createQuery()方法创建Query实例</li>
+<li>createQuery方法包含一个HQL语句参数，createQuery（hql）<br><strong>Query执行查询</strong></li>
+<li>Query接口的list()方法执行HQL查询</li>
+<li>list()方法返回结果数据类型为java.util.List,List集合中存放符合查询条件的持久化对象  <h3 id="Query接口应用编程实例"><a href="#Query接口应用编程实例" class="headerlink" title="Query接口应用编程实例"></a>Query接口应用编程实例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">testSeller</span><span class="params">()</span></span>&#123;<span class="comment">//查询数据库中所有数据</span></span><br><span class="line">	String hql = <span class="string">"from Seller"</span>;</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Seller&gt;sellers = query.list();</span><br><span class="line">	<span class="keyword">for</span>(Seller seller: sellers)&#123;</span><br><span class="line">		System.out.println(seller);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="from-子句中持久化类的引用"><a href="#from-子句中持久化类的引用" class="headerlink" title="from 子句中持久化类的引用"></a>from 子句中持久化类的引用</h3><ol>
+<li>不需要引入持久化类的全限定名，直接引入类名</li>
+<li>auto-import(自动引入)缺省情况<h3 id="from子句中别名的应用"><a href="#from子句中别名的应用" class="headerlink" title="from子句中别名的应用"></a>from子句中别名的应用</h3></li>
+<li>为查询的类指定别名</li>
+<li>在HQL语句其他部分通过别名引用该类</li>
+<li>别名命名习惯（from Seller as seller,Customer customer ）</li>
+<li>as 可以省略<br> String hql = “from Seller s, Customer c”;<h3 id="select-子句"><a href="#select-子句" class="headerlink" title="select 子句"></a>select 子句</h3></li>
+<li><p>以Object[]形式返回选择的属性，select子句中未指定返回数据类型，<br>默认为Object[],当只查询一个属性的时<br>候，返回的不是数组类型，而是Object类型  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询多个属性时</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSelectClauseObjectArray</span><span class="params">()</span></span>&#123;</span><br><span class="line">	hql = <span class="string">"select s.name,s.tel,s.address from Seller s"</span>;</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Object[]&gt;list = query.list();</span><br><span class="line">	<span class="keyword">for</span>(Object[] objs:list)&#123;</span><br><span class="line">		System.out.println(<span class="string">"name:"</span>+objs[<span class="number">0</span>]);</span><br><span class="line">		System.out.println(<span class="string">"tel:"</span>+objs[<span class="number">1</span>]);</span><br><span class="line">		System.out.println(<span class="string">"address:"</span>+objs[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//查询单个属性时</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSelectClauseObjectArray</span><span class="params">()</span></span>&#123;</span><br><span class="line">	hql = <span class="string">"select s.name from Seller s"</span>;</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Object&gt;list = query.list();</span><br><span class="line">	<span class="keyword">for</span>(Object obj:list)&#123;</span><br><span class="line">		System.out.println(<span class="string">"name:"</span>+obj);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以List形式返回选择的属性</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SellerTest</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Session session = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSelectClauseList</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">		String hql = <span class="string">"select new list(s.name,s.tel,s.address) from Seller s"</span>;</span><br><span class="line">		Query query = session.createQuery(hql);</span><br><span class="line">		List&lt;List&gt; lists=query.list();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(List list: lists)&#123;</span><br><span class="line">	</span><br><span class="line">			System.out.println(<span class="string">"name"</span>+list.get(<span class="number">0</span>));</span><br><span class="line">			System.out.println(<span class="string">"tel"</span>+list.get(<span class="number">1</span>));</span><br><span class="line">			System.out.println(<span class="string">"adddress"</span>+list.get(<span class="number">2</span>));</span><br><span class="line"> </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>以map形式返回选择的属性</li>
+</ol>
+<ul>
+<li>select 子句中使用new map指定</li>
+<li>key值为索引值，字符串类型<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SellerTest</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Session session=<span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSelectClauseMap</span><span class="params">()</span></span>&#123;</span><br><span class="line">		String hql = <span class="string">"select new map(s.name as name,s.tel as tel,s.address as address) from Seller s"</span>;</span><br><span class="line">		Query query = session.createQuery(hql);</span><br><span class="line"></span><br><span class="line">		List&lt;Map&gt; maps = query.list();</span><br><span class="line">		<span class="keyword">for</span>(Map map:maps)&#123;</span><br><span class="line">			System.out.println(<span class="string">"name"</span>+map.get(<span class="number">0</span>));</span><br><span class="line">			System.out.println(<span class="string">"tel"</span>+map.get(<span class="number">1</span>));</span><br><span class="line">			System.out.println(<span class="string">"address"</span>+map.get(<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	   <span class="comment">/*Map可以通过别名来获取属性信息</span></span><br><span class="line"><span class="comment">		*for(Map map:maps)&#123;</span></span><br><span class="line"><span class="comment">		*	System.out.println("name"+map.get("name"));</span></span><br><span class="line"><span class="comment">		*	System.out.println("tel"+map.get("tel"));</span></span><br><span class="line"><span class="comment">		*	System.out.println("address"+map.get("address"));</span></span><br><span class="line"><span class="comment">		*</span></span><br><span class="line"><span class="comment">		*&#125;</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><p>以自定义类型返回选择的属性</p>
+<ul>
+<li>持久化类中定义对应的构造器</li>
+<li>select子句中调用定义的构造器</li>
+<li>当自定义构造器时，一定要把默认的构造器补充定义出来。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在持久化类中定义新的构造器</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Seller</span><span class="params">(String name,String tel,String address)</span></span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.tel = tel;</span><br><span class="line">	<span class="keyword">this</span>.address = address;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在测试类中定义新的方法</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSelectClauseSelf</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	String hql = <span class="string">"select new Seller(s.name,s.tel,s.address) from Seller s"</span>;</span><br><span class="line">	</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Seller&gt;seller = query.list();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(Seller seller:sellers)&#123;</span><br><span class="line">		System.out.println(<span class="string">"name"</span>+seller.getName());</span><br><span class="line">		System.out.println(<span class="string">"tel"</span>+seller.getTel());</span><br><span class="line">		System.out.println(<span class="string">"address"</span>+seller.getAddress());</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>获取独特的结果————distinct</p>
+</li>
+</ol>
+<ul>
+<li>使用distinct关键字去除查询结果中的重复元素<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDistinc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	String hql = <span class="string">"select distinct c.sex from Customer c"</span>;</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Object&gt; list = query.list();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(Object obj:list)&#123;</span><br><span class="line">		System.out.println(obj);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="限制——where子句"><a href="#限制——where子句" class="headerlink" title="限制——where子句"></a>限制——where子句</h3><ol>
+<li><p>比较运算</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWhere1</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//查询商品表中描述不为空的商品</span></span><br><span class="line">	String hql = <span class="string">"from Commodity c where c.description &lt;&gt; null"</span>;</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Commodity&gt; commodities = query(list);</span><br><span class="line">	<span class="keyword">for</span>(Commodity c:commodities)&#123;</span><br><span class="line">		System.out.println(<span class="string">"name"</span>+c.getName());</span><br><span class="line">		System.out.println(<span class="string">"description"</span>+c.getDescription());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>范围运算</p>
+</li>
+</ol>
+<ul>
+<li>[not] in(列表)</li>
+<li>[not] between 值1 and 值2<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWhere2</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//查询年龄20或者是40的客户</span></span><br><span class="line">	String hql = <span class="string">"from Customer c where c.age in(20,40)"</span>;</span><br><span class="line">	<span class="comment">/*查询年龄在20~40之间的客户</span></span><br><span class="line"><span class="comment">	*</span></span><br><span class="line"><span class="comment">	*String hql = "from Customer c where c.age between 20 and 40";</span></span><br><span class="line"><span class="comment">	*</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Customer&gt; customers = query.list();</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(Customer c:customers)&#123;</span><br><span class="line"> 		System.out.println(<span class="string">"name"</span>+c.getName());</span><br><span class="line">		System.out.println(<span class="string">"age"</span>+c.getAge());</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>字符串模式匹配</li>
+</ol>
+<ul>
+<li>like 关键字</li>
+<li>通配符%、<em>(%:任意个字符，</em>:一个字符)<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWhere3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String hql = <span class="string">"from Customer c where c.name like '张_'"</span>;<span class="comment">//'_'匹配一个字符</span></span><br><span class="line">    <span class="comment">//String hql2 = "from Customer c where c.address like '%北京%'";//查询地址为北京</span></span><br><span class="line">    Query query = session.createQuery(hql);</span><br><span class="line">    List&lt;Customer&gt;customer = query.list();</span><br><span class="line">    from(Customer c:customer) &#123;</span><br><span class="line">        System.out.println(<span class="string">"name:"</span>+c.getnaName());</span><br><span class="line">       <span class="comment">// System.out.println("address:"+c.getAddress());</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><p>逻辑运算(and、or、not)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> testWhere4 &#123;</span><br><span class="line">    <span class="comment">//查询跟电脑相关的且价格在1000~5000之间的商品</span></span><br><span class="line">    String hql = <span class="string">"from Commodity c where c.price in(1000,5000) and c.category like '%电脑%'"</span>;</span><br><span class="line">    Query query = session.createQuery(hql);</span><br><span class="line">    List&lt;Commodities&gt; commoditiest = query.list();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(Commodity c:commodities) &#123;</span><br><span class="line">    System.out.println(<span class="string">"name:"</span> +c.getName());</span><br><span class="line">    System.out.println(<span class="string">"category:"</span> +c.getCategory());</span><br><span class="line">    System.out.println(<span class="string">"price:"</span> +c.getPrice());</span><br><span class="line"></span><br><span class="line">    &#125;   </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>集合运算<br><img src="https://i.imgur.com/PkNAwhb.png" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWhere1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">//查询订单明细不为空的订单</span></span><br><span class="line">    String hql = <span class="string">"from Order o where o.orderItems is not empty"</span>;</span><br><span class="line">    Quer query = session.createQuery(hql);</span><br><span class="line">    List&lt;Order&gt; orders = query.list();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(Order order:orders) &#123;</span><br><span class="line">        System.out.println(<span class="string">"customer_name:"</span> +order.getCustomer().getName());</span><br><span class="line">        System.out.println(<span class="string">"account:"</span> +order.getAccount() );</span><br><span class="line">        System.out.println(<span class="string">"date:"</span> +order.getDate());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在HQL中使用+-*/运算符(四则运算符可以在where子句和select子句中使用)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWhere4</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//查询某商品5倍价格大于3000的商品</span></span><br><span class="line">	String hql = <span class="string">"from Commodity c where c.getPrice * 5 &gt; 3000"</span>;</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	List&lt;Commodity&gt; commodities = query.list();</span><br><span class="line">	<span class="keyword">for</span>(Commodity c : commodities) &#123;</span><br><span class="line">	    System.out.println(<span class="string">"name:"</span> +c.getName());</span><br><span class="line">	    System.out.println(<span class="string">"price:"</span> +c.getPrice());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询单个对象（Query接口中uniqueResult方法，只返回一个实例对象。因此要设置好where查询条件，查询结果只能是一个实例对象，或者为空，否则会报错）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span> </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWhere</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	String hql = <span class="string">"from Customer c where c.name = 'flynee_zhang'"</span>;</span><br><span class="line">	Query query = session.createQuery(hql);</span><br><span class="line">	Customer c = (Customer)query.uniqueResult();</span><br><span class="line">	System.out.println(c.getName());</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">### 排序————order b子句</span><br><span class="line">升序排序&amp;nbsp;asc  </span><br><span class="line">降序排序&amp;nbxp;desc  </span><br><span class="line">``` java</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">String hql = <span class="string">"from Commodity by seller.id asc,price desc,name asc"</span>;</span><br><span class="line">Query query = session.createQuery(hql);</span><br><span class="line">List&lt;Commodity&gt; commodities = query.list();</span><br><span class="line"><span class="keyword">for</span>(Commodity c : commodities) &#123;</span><br><span class="line">    System.out.println(<span class="string">"commodity_name:"</span> +c.getName());</span><br><span class="line">    System.out.println(<span class="string">"seller_id:"</span> +c.getSeller().getId());</span><br><span class="line">    System.out.println(<span class="string">"seller_name:"</span> +c.getSeller().getName());</span><br><span class="line">    System.out.println(<span class="string">"price:"</span> +c.getPrice());</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks !<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.imgur.com/M76F6Lc.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.imgur.com/YVha4zN.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HQL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://flynee.github.com/2018/05/01/HQL数据查询/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/05/13/Apk反编译步骤/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Apk反编译步骤
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/04/21/hibernate配置文件hibernate-cfg-xml和-hbm-xml相关解释-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hibernate配置文件hibernate.cfg.xml和.hbm.xml相关解释.md</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
         </div>
       </div>
       <footer id="footer">
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 大魔王
-    	</div>
-      	<div class="footer-right">
-      		<a href="#" target="_blank"></a>  <a href="#" target="_blank">power by Litten</a> 
-      	</div>
+    		&copy; 2018 Flynee
+        <span id="busuanzi_container_site_uv">
+              &nbsp;&nbsp;&nbsp;&nbsp;本站访客数:<span id="busuanzi_value_site_uv"></span> 人次
+          </span>
+      </div>
+      <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -258,6 +474,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
+    
+      
       
       
     
@@ -268,6 +486,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
       
       <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
       
         
       
@@ -290,13 +510,53 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Her</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">冬</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -339,7 +599,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">情感专家&lt;br&gt;&lt;br&gt;情感顾问&lt;br&gt;&lt;br&gt;全球绿帽子协会主席</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">若你要离开 &lt;br/&gt; 我和我的生活将一起凋零 &lt;br/&gt;</div>
   	  	
     	</section>
     

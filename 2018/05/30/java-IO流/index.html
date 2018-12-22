@@ -1,25 +1,30 @@
+<html>
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="https://github.com/Flynee">
-  <title>Archives: 2018 | 魔宫</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://flynee.github.com">
+  <title>java IO流 | Flynee-Everything comes from love</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="魔宫">
-<meta property="og:url" content="https://github.com/Flynee/archives/2018/index.html">
-<meta property="og:site_name" content="魔宫">
-<meta property="og:locale" content="default">
+  <meta name="description" content="文件的编码12345678910111213141516171819202122//文件的编码方式public class EcodeDemo &amp;#123;	String s = &quot;你好Word&quot;;	//采用项目默认(GBK)编码，中文占用两个字节，英文占用一个字节，将字符串转化为字节数组	byte[] bytes = s.getBytes();	//utf-8编码中文占用三个字节，英文占用一个字">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java IO流">
+<meta property="og:url" content="http://flynee.github.com/2018/05/30/java-IO流/index.html">
+<meta property="og:site_name" content="Flynee-Everything comes from love">
+<meta property="og:description" content="文件的编码12345678910111213141516171819202122//文件的编码方式public class EcodeDemo &amp;#123;	String s = &quot;你好Word&quot;;	//采用项目默认(GBK)编码，中文占用两个字节，英文占用一个字节，将字符串转化为字节数组	byte[] bytes = s.getBytes();	//utf-8编码中文占用三个字节，英文占用一个字">
+<meta property="og:updated_time" content="2018-06-29T08:22:42.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="魔宫">
+<meta name="twitter:title" content="java IO流">
+<meta name="twitter:description" content="文件的编码12345678910111213141516171819202122//文件的编码方式public class EcodeDemo &amp;#123;	String s = &quot;你好Word&quot;;	//采用项目默认(GBK)编码，中文占用两个字节，英文占用一个字节，将字符串转化为字节数组	byte[] bytes = s.getBytes();	//utf-8编码中文占用三个字节，英文占用一个字">
   
-    <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Flynee-Everything comes from love" type="application/atom+xml">
   
   
-    <link rel="icon" href="https://avatars0.githubusercontent.com/u/26314471?s=460&v=4">
+    <link rel="icon" href="/favicon_imgs/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -33,7 +38,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -46,10 +51,10 @@
 			<img src="https://avatars0.githubusercontent.com/u/26314471?s=460&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">大魔王</a></h1>
+		  <h1 class="header-author"><a href="/">Flynee</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">情感专家，情感顾问，全球绿帽子协会主席</p>
+		<p class="header-subtitle">Love you,love the world</p>
 		
 
 		<nav class="header-menu">
@@ -57,7 +62,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/sanwen/">随笔</a></li>
+				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -65,6 +70,8 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
     			
             
     			
@@ -76,6 +83,8 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/Flynee" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="https://weibo.com/u/6055318960?refer_flag=1001030102_&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
 		        
 			</div>
 		</nav>
@@ -96,10 +105,10 @@
 				<img src="https://avatars0.githubusercontent.com/u/26314471?s=460&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">大魔王</h1>
+			  <h1 class="header-author js-header-author">Flynee</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>情感专家，情感顾问，全球绿帽子协会主席<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Love you,love the world<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -114,6 +123,8 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Flynee" title="github"><i class="icon-github"></i></a>
 			        
+						<a class="weibo" target="_blank" href="https://weibo.com/u/6055318960?refer_flag=1001030102_&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -123,7 +134,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/sanwen/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -138,107 +149,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java-IO流" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/SpringBoot/" class="archive-article-date">
-  	<time datetime="2018-12-22T05:53:46.765Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/SpringBoot/">eclipse和idea对应的快捷键</a>
+    <h1 class="article-title" itemprop="name">
+      java IO流
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/Eclipse与Idea快捷键的区别/" class="archive-article-date">
-  	<time datetime="2018-12-22T05:53:46.747Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
+        
+        <a href="/2018/05/30/java-IO流/" class="archive-article-date">
+  	<time datetime="2018-05-30T06:49:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/Eclipse与Idea快捷键的区别/">eclipse和idea对应的快捷键</a>
-    </h1>
-  
+        
 
-        <div class="article-info info-on-right">
-          
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="文件的编码"><a href="#文件的编码" class="headerlink" title="文件的编码"></a>文件的编码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件的编码方式</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EcodeDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	String s = <span class="string">"你好Word"</span>;</span><br><span class="line">	<span class="comment">//采用项目默认(GBK)编码，中文占用两个字节，英文占用一个字节，将字符串转化为字节数组</span></span><br><span class="line">	<span class="keyword">byte</span>[] bytes = s.getBytes();</span><br><span class="line">	<span class="comment">//utf-8编码中文占用三个字节，英文占用一个字节</span></span><br><span class="line">	<span class="comment">//byte[] bytes = s.getBytes("utf-8");</span></span><br><span class="line">	<span class="comment">//java是双字节编码(utf-16be)中文占用两个字节，英文占用两个字节</span></span><br><span class="line">	<span class="comment">//byte[] bytes = s.getBytes("utf-16be");</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">byte</span> b:bytes) &#123;</span><br><span class="line">		<span class="comment">//将字节数组以16进制的int形式输出</span></span><br><span class="line">		System.out.print(Integer.toHexString(b &amp; <span class="number">0xff</span>) +<span class="string">" "</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	*当把某种编码的字节序列转换成字符串时</span></span><br><span class="line"><span class="comment">	*也要用同样的编码方式，不然会出现乱码</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	String str = <span class="keyword">new</span> String(bytes,<span class="string">"gbk"</span>);</span><br><span class="line">	System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="File类的使用"><a href="#File类的使用" class="headerlink" title="File类的使用"></a>File类的使用</h3><p>java.io.File类用于表示文件（或者是目录）<br>File类只用于表示文件（目录）的信息（名称，大小），不能用于文件的读写操作<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件的编码方式</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EcodeDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	String s = <span class="string">"你好Word"</span>;</span><br><span class="line">	<span class="comment">//采用项目默认(GBK)编码，中文占用两个字节，英文占用一个字节，将字符串转化为字节数组</span></span><br><span class="line">	<span class="keyword">byte</span>[] bytes = s.getBytes();</span><br><span class="line">	<span class="comment">//utf-8编码中文占用三个字节，英文占用一个字节</span></span><br><span class="line">	<span class="comment">//byte[] bytes = s.getBytes("utf-8");</span></span><br><span class="line">	<span class="comment">//java是双字节编码(utf-16be)中文占用两个字节，英文占用两个字节</span></span><br><span class="line">	<span class="comment">//byte[] bytes = s.getBytes("utf-16be");</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">byte</span> b:bytes) &#123;</span><br><span class="line">		<span class="comment">//将字节数组以16进制的int形式输出</span></span><br><span class="line">		System.out.print(Integer.toHexString(b &amp; <span class="number">0xff</span>) +<span class="string">" "</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	*当把某种编码的字节序列转换成字符串时</span></span><br><span class="line"><span class="comment">	*也要用同样的编码方式，不然会出现乱码</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	String str = <span class="keyword">new</span> String(bytes,<span class="string">"gbk"</span>);</span><br><span class="line">	System.out.println(str);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//File类常用的API</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FileUtils</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	File file = <span class="keyword">new</span> File(<span class="string">"E:\\hello"</span>);</span><br><span class="line">	<span class="comment">//File.separator是分隔符，Mac和Windows都认识</span></span><br><span class="line">	<span class="comment">//File fiele = new File("E:" +File.separator+"hello");</span></span><br><span class="line">	<span class="comment">//查看目录是否存在，存在就删除，不存在就创建</span></span><br><span class="line">	<span class="keyword">if</span>(!file.exists())</span><br><span class="line">		file.mkdir();<span class="comment">//file.mkdirs()创建多级目录</span></span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		file.delete();</span><br><span class="line">	<span class="comment">//是否是一个目录</span></span><br><span class="line">	<span class="comment">//如果是目录返回ture,如果不是目录 或者目录不存在返回false</span></span><br><span class="line">	System.out.println(<span class="string">"file.isDiredtory()"</span>);</span><br><span class="line">	<span class="comment">//是否是一个文件</span></span><br><span class="line">	System.out.println(<span class="string">"file.isFile()"</span>);</span><br><span class="line"></span><br><span class="line">	File file2 = <span class="keyword">new</span> File(<span class="string">"E:/hello/123.txt"</span>);</span><br><span class="line">	<span class="comment">//File file2 = new File("E:/hello","123.txt");//与上功能相同</span></span><br><span class="line">	<span class="keyword">if</span>(!file2.exists())</span><br><span class="line">		file2.createNewFile();<span class="comment">//当文件123.txt不存在就创建</span></span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		file2.delete();</span><br><span class="line">	<span class="comment">//常用的File对象API</span></span><br><span class="line">	System.out.println(file);<span class="comment">//file.toString()的内容，即file的绝对路径</span></span><br><span class="line">	System.out.println(file.getAbsolutePath());<span class="comment">//获取绝对路径</span></span><br><span class="line">	System.out.println(file.getName());<span class="comment">//获取文件/目录名</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//遍历子目录下所有的内容</span></span><br><span class="line">	File[] file = dir.listFiles();<span class="comment">//返回的是子目录（文件）的抽象</span></span><br><span class="line">	<span class="keyword">if</span>(files != <span class="keyword">null</span> &amp;&amp; files.length &gt;<span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">for</span>(File file:files) &#123;</span><br><span class="line">			<span class="keyword">if</span>(file.isDirectory()) &#123;</span><br><span class="line">				listDirectory(file);<span class="comment">//递归listDirectory(File file)</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(file);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="RandomAccessFile的使用"><a href="#RandomAccessFile的使用" class="headerlink" title="RandomAccessFile的使用"></a>RandomAccessFile的使用</h3><p>  RandomAccessFile 是Java提供的对文件内容访问，可读文件写文件<br>  它支持随机访问文件，可以访问文件的任意位置<br>  Java文件模型<br>  在硬盘上的文件是byte byte byte存储的，是数据的集合<br>  打开文件<br>  有两种方式”rw”(读写),”r”(只读)<br>  RandomAccessFile raf = new RandomAccessFile(file,”rw”);<br>  文件指针，打开文件时指针在开头，pointer = 0;<br>  写文件<br>  raf.write(int)—&gt;只写一个字节(后8位)，同时指针指向下一个位置，准备再次写入<br>  读文件<br>  int b = raf.read()—&gt;读一个字节<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RafDemo</span> </span>&#123;</span><br><span class="line">	 File dmeo = <span class="keyword">new</span> File(<span class="string">"demo"</span>);<span class="comment">//相对路径下目录，本工程下</span></span><br><span class="line">	 <span class="keyword">if</span>(!demo.exists())</span><br><span class="line">		 demo.midir();</span><br><span class="line"></span><br><span class="line">	 File file = <span class="keyword">new</span> File(demo,<span class="string">"raf.dat"</span>);</span><br><span class="line">	 <span class="keyword">if</span>(!file.exists())</span><br><span class="line">		 file.createNewFile();</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//创建对文件读写的对象</span></span><br><span class="line">	 RandomAccessFile raf = <span class="keyword">new</span> RandomAccessFile(fiel,<span class="string">"rw"</span>);</span><br><span class="line">	 <span class="comment">//查看指针位置</span></span><br><span class="line">	 System.out.println(raf.getFilePointer());</span><br><span class="line">	 <span class="keyword">int</span> i = <span class="number">0x7fffffff</span>;</span><br><span class="line">	 <span class="comment">//用write方法每次只能写一个字节，如果把i写进去，得写四次</span></span><br><span class="line">	 raf.write(i&gt;&gt;&gt;<span class="number">24</span>);<span class="comment">//写高八位</span></span><br><span class="line">	 raf.write(i&gt;&gt;&gt;<span class="number">16</span>);</span><br><span class="line">	 raf.write(i&gt;&gt;&gt;<span class="number">8</span>);</span><br><span class="line">	 raf.write(i);<span class="comment">//写入低八位</span></span><br><span class="line"></span><br><span class="line">	 <span class="comment">//可以直接写一个int</span></span><br><span class="line">	 raf.writeInt(i);</span><br><span class="line"></span><br><span class="line">	 String s = <span class="string">"中"</span>;</span><br><span class="line">	 <span class="keyword">byte</span>[] bytes = s.getBytes(<span class="string">"gbk"</span>);</span><br><span class="line">	 raf.write(gbk);</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//读文件，必须把指针移到头部</span></span><br><span class="line">	 raf.seek(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	 <span class="comment">//一次性读取，把文件中的内容都读到字节数数组中</span></span><br><span class="line">	 <span class="keyword">byte</span>[] buf = <span class="keyword">new</span> <span class="keyword">byte</span>[(<span class="keyword">int</span>)raf.lenght()];</span><br><span class="line">	 raf.read(buf);</span><br><span class="line">	 System.out.println(Arrays.toString(buf));</span><br><span class="line">	 raf.close();</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="字节流的使用"><a href="#字节流的使用" class="headerlink" title="字节流的使用"></a>字节流的使用</h3><p>1.字节流<br>1）InputStream、OutputStream<br>InputStream 抽象了应用程序读取数据的方式<br>OutputStream 抽象了应用程序写出数据的方式<br>2）EOF = End 或者读到-1表示读到文件结尾了<br>3）输入流的基本方法<br>int b = in.read();//读取一个字节无符号填充到int低八位，-1是EOF<br>in.read(byte[] buf);//读取数据填充到字节数组buf<br>in.read(byte[] buf, int start, int size);//读取数据到字节数组buf<br>从buf的start位置开始，存放size长度的数据<br>4)输出流的基本方法<br>out.write(int b);//写出一个byte到流，b的低八位<br>out.write(byte[] buf);//将buf字节数组都写入到流<br>out.write(byte[] buf, int start, int size);<br>5)FileInputStream继承InputStream具体实现了在文件上读取数据<br>6)FileOutputStream实现了在文件上写数据的方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FileIODemo</span></span>&#123;</span><br><span class="line">	  <span class="comment">//以十六进制打印文件</span></span><br><span class="line">	  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printHex</span><span class="params">(String fileName)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	      FileInputStream in = <span class="keyword">new</span> FileInputStream(fileName);</span><br><span class="line">		  <span class="keyword">int</span> b;</span><br><span class="line">		  <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">		  <span class="keyword">while</span>((b=in.read())!=-<span class="number">1</span>) &#123;</span><br><span class="line">			  <span class="keyword">if</span>(b&lt;=<span class="number">0xf</span>) &#123;</span><br><span class="line">			      <span class="comment">//单位数面前补0</span></span><br><span class="line">				  System.out.print(<span class="string">"0"</span>);</span><br><span class="line">			  &#125;</span><br><span class="line">		      System.out.print(Integer.toHexString(b) +<span class="string">" "</span>);</span><br><span class="line">			  <span class="keyword">if</span>(i++%<span class="number">10</span>==<span class="number">0</span>) &#123;</span><br><span class="line">			      System.out.println();</span><br><span class="line">			  &#125;</span><br><span class="line">		  &#125;</span><br><span class="line">		  in.close();</span><br><span class="line">	  &#125;</span><br><span class="line">	  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printHexByByteArray</span><span class="params">(String fileName)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	      FileInputStream in = <span class="keyword">new</span> FileInputStream(fileName);</span><br><span class="line">		  <span class="keyword">byte</span>[] buf = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">10</span> * <span class="number">1024</span>];</span><br><span class="line">		  <span class="comment">/*从in中批量读取字节，放入到buf这个字节数组</span></span><br><span class="line"><span class="comment">		   *从第0个位置开始放，最多放buf.length个</span></span><br><span class="line"><span class="comment">		   *返回的时读到的字节个数 </span></span><br><span class="line"><span class="comment">		   */</span></span><br><span class="line">		  <span class="keyword">int</span> bytes = in.read(buf,<span class="number">0</span>,buf.lenght);</span><br><span class="line">		  <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;bytes; i++) &#123;</span><br><span class="line">			 <span class="keyword">if</span>(buf[i] &lt;=<span class="number">0xf</span>) &#123;</span><br><span class="line">			     System.out.print(<span class="string">"0"</span>);</span><br><span class="line">			 &#125;</span><br><span class="line">			 System.out.print(Integer.toHexString(buf[i] +<span class="string">" "</span>));</span><br><span class="line">		  &#125;</span><br><span class="line">		  <span class="comment">//常用读取文件方式</span></span><br><span class="line">		  <span class="keyword">int</span> bytes = <span class="number">0</span>;</span><br><span class="line">		  <span class="keyword">while</span>((bytes = in.read(buf,<span class="number">0</span>,buf.length))!= -<span class="number">1</span>) &#123;</span><br><span class="line">		      <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; bytes; i++) &#123;</span><br><span class="line">			      System.out.print(Integer.toHexString(buf[i] &amp; <span class="number">0xff</span>) +<span class="string">" "</span>);</span><br><span class="line">			  &#125;</span><br><span class="line">		  &#125;</span><br><span class="line">	  &#125;</span><br><span class="line"></span><br><span class="line">	  <span class="comment">//向文件中写入数据</span></span><br><span class="line">	  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">outPrint</span><span class="params">()</span> </span>&#123;</span><br><span class="line">          <span class="comment">//如果文件存在则删除后创建，如果文件不存在则直接创建</span></span><br><span class="line">    	  FileOutputStream out = <span class="keyword">new</span> FileOutputStream(<span class="string">"demo.dat"</span>);</span><br><span class="line">          <span class="comment">//如果文件存在则追加，不存在就重新创建</span></span><br><span class="line">		  <span class="comment">//FileOutputStream out = new FileOutputStream("demo.dat",true);</span></span><br><span class="line">	      <span class="keyword">int</span> a = <span class="number">10</span>;<span class="comment">//write只能写8位，写一个int需要写4次</span></span><br><span class="line">		  out.write(a&gt;&gt;&gt;<span class="number">24</span>);</span><br><span class="line">		  out.write(a&gt;&gt;&gt;<span class="number">16</span>);</span><br><span class="line">		  out.write(a&gt;&gt;&gt;<span class="number">8</span>);</span><br><span class="line">		  out.write(a);</span><br><span class="line">		  <span class="comment">//write也能写一个字节数组</span></span><br><span class="line">		  <span class="keyword">byte</span>[] buf = <span class="string">"你好"</span>.getBytes(<span class="string">"gbk"</span>);</span><br><span class="line">		  out.write(buf);</span><br><span class="line">		  out.close();</span><br><span class="line">	  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>7）DataOutputStream/DataInputStream<br>是对流功能的扩展，可以更加方便地读取int,long,字符等数据类型数据<br>DataOutputStream(writeInt()/writeDouble()/writeUTF())  </p>
+<h3 id="字符流的使用"><a href="#字符流的使用" class="headerlink" title="字符流的使用"></a>字符流的使用</h3>
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks !<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.imgur.com/M76F6Lc.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.imgur.com/YVha4zN.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://flynee.github.com/2018/05/30/java-IO流/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/05/13/Apk反编译步骤/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Apk反编译步骤</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
         </div>
       </div>
       <footer id="footer">
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 大魔王
-    	</div>
-      	<div class="footer-right">
-      		<a href="#" target="_blank"></a>  <a href="#" target="_blank">power by Litten</a> 
-      	</div>
+    		&copy; 2018 Flynee
+        <span id="busuanzi_container_site_uv">
+              &nbsp;&nbsp;&nbsp;&nbsp;本站访客数:<span id="busuanzi_value_site_uv"></span> 人次
+          </span>
+      </div>
+      <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -258,6 +380,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
+    
+      
       
       
     
@@ -268,6 +392,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
       
       <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
       
         
       
@@ -290,13 +416,53 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Her</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">冬</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -339,7 +505,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">情感专家&lt;br&gt;&lt;br&gt;情感顾问&lt;br&gt;&lt;br&gt;全球绿帽子协会主席</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">若你要离开 &lt;br/&gt; 我和我的生活将一起凋零 &lt;br/&gt;</div>
   	  	
     	</section>
     

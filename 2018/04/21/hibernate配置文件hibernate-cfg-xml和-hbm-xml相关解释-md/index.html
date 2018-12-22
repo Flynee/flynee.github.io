@@ -1,25 +1,30 @@
+<html>
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="https://github.com/Flynee">
-  <title>Archives: 2018 | 魔宫</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://flynee.github.com">
+  <title>hibernate配置文件hibernate.cfg.xml和.hbm.xml相关解释.md | Flynee-Everything comes from love</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="魔宫">
-<meta property="og:url" content="https://github.com/Flynee/archives/2018/index.html">
-<meta property="og:site_name" content="魔宫">
-<meta property="og:locale" content="default">
+  <meta name="description" content="hibernate.cfg.xml123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
+<meta name="keywords" content="java,hibernate">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hibernate配置文件hibernate.cfg.xml和.hbm.xml相关解释.md">
+<meta property="og:url" content="http://flynee.github.com/2018/04/21/hibernate配置文件hibernate-cfg-xml和-hbm-xml相关解释-md/index.html">
+<meta property="og:site_name" content="Flynee-Everything comes from love">
+<meta property="og:description" content="hibernate.cfg.xml123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
+<meta property="og:updated_time" content="2018-04-21T08:33:09.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="魔宫">
+<meta name="twitter:title" content="hibernate配置文件hibernate.cfg.xml和.hbm.xml相关解释.md">
+<meta name="twitter:description" content="hibernate.cfg.xml123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
   
-    <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Flynee-Everything comes from love" type="application/atom+xml">
   
   
-    <link rel="icon" href="https://avatars0.githubusercontent.com/u/26314471?s=460&v=4">
+    <link rel="icon" href="/favicon_imgs/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -33,7 +38,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -46,10 +51,10 @@
 			<img src="https://avatars0.githubusercontent.com/u/26314471?s=460&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">大魔王</a></h1>
+		  <h1 class="header-author"><a href="/">Flynee</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">情感专家，情感顾问，全球绿帽子协会主席</p>
+		<p class="header-subtitle">Love you,love the world</p>
 		
 
 		<nav class="header-menu">
@@ -57,7 +62,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/sanwen/">随笔</a></li>
+				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -65,6 +70,8 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
     			
             
     			
@@ -76,6 +83,8 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/Flynee" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="https://weibo.com/u/6055318960?refer_flag=1001030102_&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
 		        
 			</div>
 		</nav>
@@ -96,10 +105,10 @@
 				<img src="https://avatars0.githubusercontent.com/u/26314471?s=460&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">大魔王</h1>
+			  <h1 class="header-author js-header-author">Flynee</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>情感专家，情感顾问，全球绿帽子协会主席<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Love you,love the world<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -114,6 +123,8 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Flynee" title="github"><i class="icon-github"></i></a>
 			        
+						<a class="weibo" target="_blank" href="https://weibo.com/u/6055318960?refer_flag=1001030102_&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -123,7 +134,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/sanwen/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -138,107 +149,228 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hibernate配置文件hibernate-cfg-xml和-hbm-xml相关解释-md" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/SpringBoot/" class="archive-article-date">
-  	<time datetime="2018-12-22T05:53:46.765Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/SpringBoot/">eclipse和idea对应的快捷键</a>
+    <h1 class="article-title" itemprop="name">
+      hibernate配置文件hibernate.cfg.xml和.hbm.xml相关解释.md
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/Eclipse与Idea快捷键的区别/" class="archive-article-date">
-  	<time datetime="2018-12-22T05:53:46.747Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
+        
+        <a href="/2018/04/21/hibernate配置文件hibernate-cfg-xml和-hbm-xml相关解释-md/" class="archive-article-date">
+  	<time datetime="2018-04-21T07:44:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/Eclipse与Idea快捷键的区别/">eclipse和idea对应的快捷键</a>
-    </h1>
-  
+        
 
-        <div class="article-info info-on-right">
-          
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="hibernate-cfg-xml"><a href="#hibernate-cfg-xml" class="headerlink" title="hibernate.cfg.xml"></a>hibernate.cfg.xml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--标准的XML文件的起始行，version='1.0'表明XML的版本，encoding='gb2312'表明XML文件的编码方式--&gt;</span>     </span><br><span class="line">                &lt;?xml version='1.0' encoding='gb2312'?&gt;     </span><br><span class="line"><span class="comment">&lt;!--表明解析本XML文件的DTD文档位置，DTD是Document Type Definition 的缩写,即文档类型的定义,XML解析器使用DTD文档来检查XML文件的合法性。hibernate.sourceforge.net/hibernate-configuration-3.0dtd可以在Hibernate3.1.3软件包中的src\org\hibernate目录中找到此文件--&gt;</span>     </span><br><span class="line"><span class="meta">&lt;!DOCTYPE hibernate-configuration PUBLIC     </span></span><br><span class="line"><span class="meta">          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"     </span></span><br><span class="line"><span class="meta">          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"&gt;</span>     </span><br><span class="line">    <span class="comment">&lt;!--声明Hibernate配置文件的开始--&gt;</span>          </span><br><span class="line">    <span class="tag">&lt;<span class="name">hibernate-configuration</span>&gt;</span>     </span><br><span class="line">    <span class="comment">&lt;!--表明以下的配置是针对session-factory配置的，SessionFactory是Hibernate中的一个类，这个类主要负责保存HIbernate的配置信息，以及对Session的操作--&gt;</span>     </span><br><span class="line">      <span class="tag">&lt;<span class="name">session-factory</span>&gt;</span>        </span><br><span class="line">      <span class="comment">&lt;!--配置数据库的驱动程序，Hibernate在连接数据库时，需要用到数据库的驱动程序--&gt;</span>     </span><br><span class="line">          <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.driver_class"</span>&gt;</span>com.mysql.jdbc.Driver <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">      <span class="comment">&lt;!--设置数据库的连接url:jdbc:mysql://localhost/hibernate,其中localhost表示mysql服务器名称，此处为本机，    hibernate是数据库名--&gt;</span>      </span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.url"</span>&gt;</span>jdbc:mysql://localhost/hibernate<span class="tag">&lt;/<span class="name">property</span>&gt;</span>  </span><br><span class="line">    <span class="comment">&lt;!--连接数据库是用户名--&gt;</span>     </span><br><span class="line">          <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.username"</span>&gt;</span>root <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">          <span class="comment">&lt;!--连接数据库是密码--&gt;</span>     </span><br><span class="line">          <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.password"</span>&gt;</span>123456 <span class="tag">&lt;/<span class="name">property</span>&gt;</span>            </span><br><span class="line">          <span class="comment">&lt;!--数据库连接池的大小--&gt;</span>     </span><br><span class="line">          <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.pool.size"</span>&gt;</span>20 <span class="tag">&lt;/<span class="name">property</span>&gt;</span>            </span><br><span class="line">        <span class="comment">&lt;!--是否在后台显示Hibernate用到的SQL语句，开发时设置为true，便于差错，程序运行时可以在Eclipse的控制台显示Hibernate的执行Sql语句。项目部署后可以设置为false，提高运行效率--&gt;</span>     </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.show_sql"</span>&gt;</span>true <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">        <span class="comment">&lt;!--jdbc.fetch_size是指Hibernate每次从数据库中取出并放到JDBC的Statement中的记录条数。Fetch Size设的越大，读数据库的次数越少，速度越快，Fetch Size越小，读数据库的次数越多，速度越慢--&gt;</span>     </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"jdbc.fetch_size"</span>&gt;</span>50 <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">        <span class="comment">&lt;!--jdbc.batch_size是指Hibernate批量插入,删除和更新时每次操作的记录数。Batch Size越大，批量操作的向数据库发送Sql的次数越少，速度就越快，同样耗用内存就越大--&gt;</span>     </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"jdbc.batch_size"</span>&gt;</span>23 <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">        <span class="comment">&lt;!--jdbc.use_scrollable_resultset是否允许Hibernate用JDBC的可滚动的结果集。对分页的结果集。对分页时的设置非常有帮助--&gt;</span>     </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"jdbc.use_scrollable_resultset"</span>&gt;</span>false <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">        <span class="comment">&lt;!--connection.useUnicode连接数据库时是否使用Unicode编码--&gt;</span>     </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"Connection.useUnicode"</span>&gt;</span>true <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">        <span class="comment">&lt;!--connection.characterEncoding连接数据库时数据的传输字符集编码方式，最好设置为gbk，用gb2312有的字符不全--&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.characterEncoding"</span>&gt;</span>gbk <span class="tag">&lt;/<span class="name">property</span>&gt;</span>          </span><br><span class="line">            </span><br><span class="line">        <span class="comment">&lt;!--hibernate.dialect 只是Hibernate使用的数据库方言,就是要用Hibernate连接那种类型的数据库服务器。--&gt;</span>     </span><br><span class="line">          <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.dialect"</span>&gt;</span>org.hibernate.dialect.MySQLDialect <span class="tag">&lt;/<span class="name">property</span>&gt;</span>     </span><br><span class="line">        <span class="comment">&lt;!--指定映射文件为“hibernate/ch1/UserInfo.hbm.xml”--&gt;</span>            </span><br><span class="line">          <span class="tag">&lt;<span class="name">mapping</span> <span class="attr">resource</span>=<span class="string">"org/mxg/UserInfo.hbm.xml"</span>&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;/<span class="name">session-factory</span>&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;/<span class="name">hibernate-configuration</span>&gt;</span>        </span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line">  <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSource"</span>      </span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">"org.apache.commons.dbcp.BasicDataSource"</span>      </span></span><br><span class="line"><span class="tag">  <span class="attr">destroy-method</span>=<span class="string">"close"</span>&gt;</span>      </span><br><span class="line">//连接驱动        </span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.driverClassName&#125;"</span> /&gt;</span>      </span><br><span class="line">//连接url,        </span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.url&#125;"</span> /&gt;</span>      </span><br><span class="line">//连接用户名        </span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.username&#125;"</span> /&gt;</span>      </span><br><span class="line">//连接密码        </span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.password&#125;"</span> /&gt;</span>      </span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span>      </span><br><span class="line">      </span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"hbSessionFactory"</span>      </span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">"org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span> /&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"configLocation"</span>&gt;</span>      </span><br><span class="line">//hibernate配置文件位置        </span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>WEB-INF/hibernate.cfg.xml <span class="tag">&lt;/<span class="name">value</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"configurationClass"</span>      </span></span><br><span class="line"><span class="tag">  <span class="attr">value</span>=<span class="string">"org.hibernate.cfg.AnnotationConfiguration"</span> /&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernateProperties"</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;<span class="name">props</span>&gt;</span>      </span><br><span class="line">  //针对oracle数据库的方言,特定的关系数据库生成优化的SQL        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dialect"</span>&gt;</span>      </span><br><span class="line">    org.hibernate.dialect.OracleDialect        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  //选择HQL解析器的实现        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.query.factory_class"</span>&gt;</span>      </span><br><span class="line">    org.hibernate.hql.ast.ASTQueryTranslatorFactory        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    //是否在控制台打印sql语句        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.show_sql"</span>&gt;</span>true <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    //在Hibernate系统参数中hibernate.use_outer_join被打开的情况下,该参数用来允许使用outer join来载入此集合的数据。        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.use_outer_join"</span>&gt;</span>true <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  //默认打开，启用cglib反射优化。cglib是用来在Hibernate中动态生成PO字节码的，打开优化可以加快字节码构造的速度        </span><br><span class="line">  <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.cglib.use_reflection_optimizer"</span>&gt;</span>true <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  //输出格式化后的sql,更方便查看        </span><br><span class="line">  <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.format_sql"</span>&gt;</span>true <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  //“useUnicode”和“characterEncoding”决定了它是否在客户端和服务器端传输过程中进行Encode，以及如何进行Encode        </span><br><span class="line">  <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.connection.useUnicode"</span>&gt;</span>true <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  //允许查询缓存, 个别查询仍然需要被设置为可缓存的.        </span><br><span class="line">  <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.cache.use_query_cache"</span>&gt;</span>false <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.default_batch_fetch_size"</span>&gt;</span>16 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    //连接池的最大活动个数        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.maxActive"</span>&gt;</span>100 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  //当连接池中的连接已经被耗尽的时候，DBCP将怎样处理(0 = 失败,1 = 等待,2  =  增长)        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.whenExhaustedAction"</span>&gt;</span>1 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    //最大等待时间        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.maxWait"</span>&gt;</span>1200 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    //没有人用连接的时候，最大闲置的连接个数        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.maxIdle"</span>&gt;</span>10 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    ##以下是对prepared statement的处理，同上。        </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.ps.maxActive"</span>&gt;</span>100 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.ps.whenExhaustedAction"</span>&gt;</span>1 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.ps.maxWait"</span>&gt;</span>1200 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">    <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"hibernate.dbcp.ps.maxIdle"</span>&gt;</span>10 <span class="tag">&lt;/<span class="name">prop</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;/<span class="name">props</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span>      </span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="hibernate-hbm-xml"><a href="#hibernate-hbm-xml" class="headerlink" title="hibernate.hbm.xml"></a>hibernate.hbm.xml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"zyw.app.domain.Person1"</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"id"</span> <span class="attr">type</span>=<span class="string">"java.lang.Integer"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">generator</span> <span class="attr">class</span>=<span class="string">"identity"</span> /&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">type</span>=<span class="string">"java.lang.String"</span>/&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"java.lang.Integer"</span>/&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">list</span> <span class="attr">name</span>=<span class="string">"schools"</span> <span class="attr">inverse</span>=<span class="string">"false"</span> <span class="attr">table</span>=<span class="string">"school"</span> <span class="attr">lazy</span>=<span class="string">"true"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">key</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"person_id"</span> /&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;/<span class="name">key</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">list-index</span> <span class="attr">column</span>=<span class="string">"schools_order"</span>/&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">element</span> <span class="attr">type</span>=<span class="string">"java.lang.String"</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"school_name"</span> /&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;/<span class="name">element</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;/<span class="name">list</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">class</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-mapping</span>&gt;</span>  </span><br><span class="line">一、映射文件结构</span><br><span class="line">Hibernate的持久化类和关系数据库之间的映射通常是用一个XML文档来定义的。该文档通过一系列XML元素的配置，来将持久化类与数据库表之间建立起一一映射。这意味着映射文档是按照持久化类的定义来创建的，而不是表的定义。</span><br><span class="line"></span><br><span class="line">1、根元素：<span class="tag">&lt;<span class="name">hibernate-mapping</span>&gt;</span>，每一个hbm.xml文件都有唯一的一个根元素，包含一些可选的属性</span><br><span class="line"></span><br><span class="line">1）package：指定一个包前缀，如果在映射文档中没有指定全限定的类名，就使用这个作为包名,如</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span> <span class="attr">package</span>=<span class="string">"com.demo.hibernate.beans"</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"User"</span> <span class="attr">...</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt; /<span class="attr">hibernate-mapping</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt; <span class="attr">hibernate-mapping</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"com.demo.hibernate.beans.User"</span> <span class="attr">...</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt; /<span class="attr">hibernate-mapping</span>&gt;</span>  </span><br><span class="line">2）schema：数据库schema的名称</span><br><span class="line">3）catalog：数据库catalog的名称</span><br><span class="line"></span><br><span class="line">4）default-cascade：默认的级联风格,默认为none</span><br><span class="line"></span><br><span class="line">5）default-access：Hibernate用来访问属性的策略</span><br><span class="line"></span><br><span class="line">6）default-lazy：指定了未明确注明lazy属性的Java属性和集合类，Hibernate会采取什么样的默认加载风格,默认为true</span><br><span class="line"></span><br><span class="line">7）auto-import：指定我们是否可以在查询语言中使用非全限定的类名,默认为true,如果项目中有两个同名的持久化类,则最好在这两个类的对应的映射文件中配置为false</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2、<span class="tag">&lt;<span class="name">class</span>&gt;</span>定义类：根元素的子元素，用以定义一个持久化类与数据表的映射关系,如下是该元素包含的一些可选的属性</span><br><span class="line"></span><br><span class="line">1）name：持久化类(或者接口)的Java全限定名,如果这个属性不存在,则Hibernate将假定这是一个非POJO的实体映射</span><br><span class="line"></span><br><span class="line">2）table：对应数据库表名</span><br><span class="line"></span><br><span class="line">3）discriminator-value：默认和类名一样，一个用于区分不同的子类的值，在多态行为时使用</span><br><span class="line"></span><br><span class="line">4）mutable：表明该类的实例是可变的或者是不可变的</span><br><span class="line"></span><br><span class="line">5）schema：覆盖根元素<span class="tag">&lt;<span class="name">hibernate-mapping</span>&gt;</span>中指定的schema名字</span><br><span class="line"></span><br><span class="line">6）catalog：覆盖根元素<span class="tag">&lt;<span class="name">hibernate-mapping</span>&gt;</span>中指定的catalog名字</span><br><span class="line"></span><br><span class="line">7）proxy：指定一个接口，在延迟装载时作为代理使用</span><br><span class="line"></span><br><span class="line">8）dynamic-update：指定用于UPDATE的SQL将会在运行时动态生成，并且只更新那些改变过的字段</span><br><span class="line"></span><br><span class="line">9）dynamic-insert：指定用于INSERT的SQL将会在执行时动态生成，并且只包含那些非空值字段</span><br><span class="line"></span><br><span class="line">10）select-before-update：指定HIbernate除非确定对象真正被修改了（如果该值为true）,否则不会执行SQL</span><br><span class="line"> UPDATE操作。在特定场合（实际上，它只在一个瞬时对象关联到一个新的Session中时执行的update()中生效）,这说明Hibernate会在UPDATE之前执行一次额外的SQL SELECT操作，来决定是否应该执行UPDATE</span><br><span class="line"></span><br><span class="line">11）polymorphism：多态，界定是隐式还是显式的多态查询</span><br><span class="line"></span><br><span class="line">12）where：指定定个附加的SQLWHERE条件，在抓取这个类的对象时会增加这个条件</span><br><span class="line"></span><br><span class="line">13）persister：指定一个定制的ClassPersister</span><br><span class="line"></span><br><span class="line">14）batch-size：指定一个用于根据标识符(identifier)抓取实例时使用的'batch</span><br><span class="line"> size'(批次抓取数量)</span><br><span class="line"></span><br><span class="line">15）optimistic-lock：乐观锁定，决定乐观锁定的策略</span><br><span class="line"></span><br><span class="line">16）lazy：通过设置lazy="false",所有的延迟加载(Lazy</span><br><span class="line"> fetching)功能将未被激活(disabled)</span><br><span class="line"></span><br><span class="line">17）entity-name</span><br><span class="line"></span><br><span class="line">18）check：这是一个SQL表达式，用于为自动生成的schema添加多行(multi-row)约束检查</span><br><span class="line"></span><br><span class="line">19）rowid</span><br><span class="line"></span><br><span class="line">20）subselect</span><br><span class="line"></span><br><span class="line">21）abstract：用于在<span class="tag">&lt;<span class="name">union-subclass</span>&gt;</span>的继承结构(hierarchies)中标识抽象超类</span><br><span class="line"></span><br><span class="line">二、映射主键</span><br><span class="line"></span><br><span class="line">通常情况下，hibernate建议为持久化类定义一个标识属性，用于唯一的标识某个持久化实例</span><br><span class="line"></span><br><span class="line">标识属性通过<span class="tag">&lt;<span class="name">id...</span>/&gt;</span>元素来指定，<span class="tag">&lt;<span class="name">id...</span>/&gt;</span>元素中的name属性的值就是持久化类的标识属性名，除此之外还可指定如下几个属性</span><br><span class="line"></span><br><span class="line">1）type：标识Hibernate类型的名字</span><br><span class="line"></span><br><span class="line">2）column：数据库表的主键这段的名字</span><br><span class="line"></span><br><span class="line">3）unsaved-value：用来标志该实例是刚刚创建的，尚未保存。可以用来区分对象的状态</span><br><span class="line"></span><br><span class="line">4）access：Hibernate用来访问属性值的策略</span><br><span class="line"></span><br><span class="line">尽量避免使用复杂的物理主键，应该为数据库增加一列，作为逻辑主键，hibernate为这种逻辑主键提供了主键生成器，用<span class="tag">&lt;<span class="name">generator</span>&gt;</span>元素来指定主键的生成器</span><br><span class="line"></span><br><span class="line">该元素的作用是指定主键的生成器，通过一个class属性指定生成器对应的类。(通常与<span class="tag">&lt;<span class="name">id</span>&gt;</span>元素结合使用)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"id"</span> <span class="attr">column</span>=<span class="string">"ID"</span> <span class="attr">type</span>=<span class="string">"integer"</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">generator</span> <span class="attr">class</span>=<span class="string">"native"</span> /&gt;</span>  </span><br><span class="line"><span class="tag">&lt; /<span class="attr">id</span>&gt;</span>  </span><br><span class="line">--native是Hibernate主键生成器的实现算法之一，由Hibernate根据底层数据库自行判断采用identity、hilo、sequence其中一种作为主键生成方式。</span><br><span class="line">Hibernate提供的内置生成器：</span><br><span class="line"></span><br><span class="line">1）assigned算法</span><br><span class="line"></span><br><span class="line">2）hilo算法</span><br><span class="line"></span><br><span class="line">3）seqhilo算法</span><br><span class="line"></span><br><span class="line">4）increment算法</span><br><span class="line"></span><br><span class="line">5）identity算法</span><br><span class="line"></span><br><span class="line">6）sequence算法</span><br><span class="line"></span><br><span class="line">7）native算法</span><br><span class="line"></span><br><span class="line">8）uuid.hex算法</span><br><span class="line"></span><br><span class="line">9）uuid.string算法</span><br><span class="line"></span><br><span class="line">10）foregin算法 </span><br><span class="line"></span><br><span class="line">11）select算法</span><br><span class="line">三、映射普通属性</span><br><span class="line"></span><br><span class="line">普通属性用<span class="tag">&lt;<span class="name">property</span>&gt;</span>元素来表示持久化类的属性与数据库表字段之间的映射,包含如下属性： </span><br><span class="line"></span><br><span class="line">1）name：持久化类的属性名，以小写字母开头</span><br><span class="line"></span><br><span class="line">2）column：数据库表的字段名</span><br><span class="line"></span><br><span class="line">3）type：Hibernate映射类型的名字</span><br><span class="line"></span><br><span class="line">4）update：表明用于UPDATE的SQL语句中是否包含这个被映射的字段，默认为true</span><br><span class="line"></span><br><span class="line">5）insert：表明用于INSERT的SQL语句中是否包含这个被映射是否包含这个被映射的字段，默认为true</span><br><span class="line"></span><br><span class="line">6）formula：一个SQL表达式，定义了这个计算属性的值</span><br><span class="line"></span><br><span class="line">7）access：Hibernate用来访问属性值的策略</span><br><span class="line"></span><br><span class="line">8）lazy：指定实例变量第一次被访问时，这个属性是否延迟抓取，默认为false</span><br><span class="line"></span><br><span class="line">9）unique：使用DDL为该字段添加唯一的约束，此外，这也可以用做property-ref的目标属性</span><br><span class="line"></span><br><span class="line">10）not-null：使用DDL为该字段添加可否为空的约束</span><br><span class="line"></span><br><span class="line">11）optimistic-lock：指定这个属性在进行更新时是否需要获得乐观锁定（换句话说，它决定这个属性发生脏数据时版本version的值是否增长） </span><br><span class="line"></span><br><span class="line">access属性用来让你控制Hibernate如何在运行时访问属性。默认情况下，Hibernate会使用属性的get/set方法对。如果你指明access="field"，则Hibernate会忽略get/set方法对，直接使用反射来访问成员变量。</span><br><span class="line"></span><br><span class="line">formula属性是个特别强大的的特征。用一个SQL表达式生成计算的结果，它会在这个实例转载时翻译成一个SQL查询的SELECT子查询语句。如：</span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"totalPrice"</span> <span class="attr">formula</span>=<span class="string">"(SELECT SUM(*) FROM user)"</span> /&gt;</span>  </span><br><span class="line">如下面的实体类</span><br><span class="line">[java] view plain copy</span><br><span class="line">public class News  </span><br><span class="line">&#123;  </span><br><span class="line">    private Integer id;  </span><br><span class="line">    private String title;  </span><br><span class="line">    private String content;  </span><br><span class="line">    private String fullContent;  </span><br><span class="line">//省略属性的getter和setter方法  </span><br><span class="line">&#125;  </span><br><span class="line">对应的配置文件News.hbm.xml</span><br><span class="line">[html] view plain copy</span><br><span class="line">&lt;?xml version="1.0" encoding="gb2312"?&gt;  </span><br><span class="line"><span class="comment">&lt;!-- 指定Hiberante3映射文件的DTD信息 --&gt;</span>  </span><br><span class="line"><span class="meta">&lt;!DOCTYPE hibernate-mapping PUBLIC   </span></span><br><span class="line"><span class="meta">    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  </span></span><br><span class="line"><span class="meta">    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"&gt;</span>  </span><br><span class="line"><span class="comment">&lt;!-- hibernate-mapping是映射文件的根元素 --&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span> <span class="attr">package</span>=<span class="string">"org.crazyit.app.domain"</span>&gt;</span>  </span><br><span class="line">    <span class="comment">&lt;!-- 每个class元素对应一个持久化对象 --&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"News"</span> <span class="attr">table</span>=<span class="string">"news_table"</span>&gt;</span>  </span><br><span class="line">        <span class="comment">&lt;!-- id元素定义持久化类的标识属性 --&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"id"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">generator</span> <span class="attr">class</span>=<span class="string">"identity"</span>/&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">        <span class="comment">&lt;!-- property元素定义常规属性 --&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"title"</span> <span class="attr">not-null</span>=<span class="string">"true"</span>/&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"content"</span>/&gt;</span>  </span><br><span class="line">        <span class="comment">&lt;!-- 通过formula指定该属性值没有对应的实际数据列  </span></span><br><span class="line"><span class="comment">            该属性值将由系统根据表达式来生成--&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"fullContent"</span>  </span></span><br><span class="line"><span class="tag">             <span class="attr">formula</span>=<span class="string">"(select concat(nt.title,nt.content)   </span></span></span><br><span class="line"><span class="tag"><span class="string">             from news_table nt where nt.id= id)"</span>/&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;/<span class="name">class</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-mapping</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line">利用formula的强大特征，可以实现持久化类某个属性的生成，而该属性不会保存，不会有对应的数据列（即数据库无此列数据，只包含在实体类里）</span><br><span class="line">当保存News对象时</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[java] view plain copy</span><br><span class="line">News n = new News();  </span><br><span class="line">n.setTitle("xxx");  </span><br><span class="line">n.setContent("yyy");  </span><br><span class="line">session.save(n);  </span><br><span class="line">数据库底层并无fullContent数据列，当再次取出News对象时，hibernate将执行formula配置的sql语句得出fullContent的属性值</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[java] view plain copy</span><br><span class="line">News n2 = session.get(News.class,1)  </span><br><span class="line">System.out.println(n2.getFullContent)  </span><br><span class="line">结果为"xxxyyy"</span><br><span class="line"></span><br><span class="line">利用formula可以让hibernate自动生成属性的值，我们也可以由数据库的触发器来生成，不过数据库必须增加fullContent数据列，</span><br><span class="line"></span><br><span class="line">只要将</span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"fullContent"</span>  </span></span><br><span class="line"><span class="tag">             <span class="attr">formula</span>=<span class="string">"(select concat(nt.title,nt.content)   </span></span></span><br><span class="line"><span class="tag"><span class="string">             from news_table nt where nt.id= id)"</span>/&gt;</span>   </span><br><span class="line">改为</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"fullContent"</span> <span class="attr">generated</span>=<span class="string">"insert"</span>/&gt;</span>   </span><br><span class="line">hibernate将会让数据库执行insert类型触发器</span><br><span class="line">四、映射集合、组件。。。属性</span><br><span class="line"></span><br><span class="line">Hibernate要求持久化集合值字段必须声明为接口，可以是java.util.Set、java.util.Collection、java.util.List、java.util.Map、java.util.SortedSet、java.util.SortedMap等</span><br><span class="line"></span><br><span class="line">对于hibernate中,集合属性在Hibernate的映射文件中是非常常见的，也是非常重要的内容,理解和熟练掌握常用的集合属性则显得更为重要。在hibernate的配置文件中,例如每个人的考试成绩，就是典型的Map结构，每门功课对应一门成绩。或者更简单的集合属性，某个企业的部门，一个企业通常对应多个部门等。集合属性是现实生活中非常普遍的属性关系。集合属性大致有两种：第一种是单纯的集合属性，例如像List,Set或数组等集合属性；还有一种就是Map结构的集合属性。每个属性都有对应的key映射.基本配置如下</span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"zyw.app.domain.Person1"</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"id"</span> <span class="attr">type</span>=<span class="string">"java.lang.Integer"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">generator</span> <span class="attr">class</span>=<span class="string">"identity"</span> /&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">type</span>=<span class="string">"java.lang.String"</span>/&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"java.lang.Integer"</span>/&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">list</span> <span class="attr">name</span>=<span class="string">"schools"</span> <span class="attr">inverse</span>=<span class="string">"false"</span> <span class="attr">table</span>=<span class="string">"school"</span> <span class="attr">lazy</span>=<span class="string">"true"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">key</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"person_id"</span> /&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;/<span class="name">key</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">list-index</span> <span class="attr">column</span>=<span class="string">"schools_order"</span>/&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">element</span> <span class="attr">type</span>=<span class="string">"java.lang.String"</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"school_name"</span> /&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;/<span class="name">element</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;/<span class="name">list</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">class</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-mapping</span>&gt;</span>  </span><br><span class="line">添加集合属性元素配置步骤如下：</span><br><span class="line"></span><br><span class="line">1、集合属性的元素大致有如下几种: （1）<span class="tag">&lt;<span class="name">set..</span>/&gt;</span>元素：可以映射类型为java.util.Set接口的属性，它的元素存放没有顺序且不允许重复，也可以映射类型为java.util.SortSet接口的属性，它的元素可以按自然属性排序，也可以用sort属性指定排序规则</span><br><span class="line"></span><br><span class="line">（2）<span class="tag">&lt;<span class="name">list...</span>/&gt;</span>元素：可以映射类型为java.util.List接口的属性，它需要在结合属性对象的数据库表中用一个额外的索引列保存每一个元素的位置，即是有属性可重复的。</span><br><span class="line"></span><br><span class="line">（3）<span class="tag">&lt;<span class="name">bag...</span>/&gt;</span>元素：可以映射java.util.Collection接口的属性，它的元素可能重复，但不保存属性，和set差不多，正因为有它，是因为如果通常使用list比较多，并且不想让添加一列的话，就用它。</span><br><span class="line"></span><br><span class="line">（4）<span class="tag">&lt;<span class="name">map...</span>/&gt;</span>元素：可以映射为java.util.Map接口的属性，它的元素以键值对的形式保存，也是无序的，也可以映射类型为java.util.SortMap接口的属性，它的元素可以按自然顺序排序，也可以用sort属性指定排序规则</span><br><span class="line"></span><br><span class="line">（5）<span class="tag">&lt;<span class="name">array...</span>/&gt;</span>元素：可以映射类型为数组的属性，但在实际运用中用的极少</span><br><span class="line"></span><br><span class="line">（6）<span class="tag">&lt;<span class="name">primitive-array...</span>/&gt;</span>元素：可以映射类型为基本数据类型数组的属性，但在实际运用中用的极少</span><br><span class="line"></span><br><span class="line">2、因为集合属性都需要保存到另一个数据表中，所以保存集合属性的数据表必须包含一个外键列用于参照到主键列，可以在集合属性元素中用子元素<span class="tag">&lt;<span class="name">key...</span>/&gt;</span>来映射</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">key...</span>/&gt;</span>元素有如下属性</span><br><span class="line"></span><br><span class="line">column:指定外键字段的列名</span><br><span class="line"></span><br><span class="line">on-delete:是否打开级联删除</span><br><span class="line"></span><br><span class="line">property-ref:指定外键字段是否为原表的主键</span><br><span class="line"></span><br><span class="line">not-null:非空约束</span><br><span class="line"></span><br><span class="line">update:是否可更新</span><br><span class="line"></span><br><span class="line">unique:是否唯一约束</span><br><span class="line"></span><br><span class="line">2、除了<span class="tag">&lt;<span class="name">set...</span>/&gt;</span>和<span class="tag">&lt;<span class="name">bag...</span>/&gt;</span>元素外，都要为集合元素的数据表指定一个索引列——用于保存数组索引，List索引，或者Map集合的key索引，在集合属性元素中用于映射索引列的子元素有如下几个</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">List-index</span>/&gt;</span>用于List，数组</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">map-key</span>/&gt;</span>用于映射Map，基本数据类型的索引列</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">map-key-many-to-many</span>/&gt;</span>用于Map中实体类型的引用（即key为实体类）</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">composite-map-key</span>/&gt;</span>用于Map中复合类型的引用（即key为组件，非实体类，就是一个复合类型类）</span><br><span class="line"></span><br><span class="line">3、最后，我们还需要映射集合元素的值属性</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">element...</span>/&gt;</span>集合元素是基本类型或包装类，字符串类型，日期类型</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">composite-element...</span>/&gt;</span>集合元素是复合类型的引用（即key为组件，非实体类，就是一个复合类型类）</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">one-to-many...</span>/&gt;</span>或<span class="tag">&lt;<span class="name">many-to-many...</span>/&gt;</span>集合元素是实体类型的引用（即key为实体类）</span><br><span class="line"></span><br><span class="line">记忆规则其实很简单，可以这么记：</span><br><span class="line">基本配置：</span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"zyw.app.domain.Person1"</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"id"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">generator</span> <span class="attr">class</span>=<span class="string">"identity"</span> /&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span>/&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"age"</span>/&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">class</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-mapping</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line">A.如果<span class="tag">&lt;<span class="name">property</span>/&gt;</span>属性为集合属性，按照123步骤置换成对应的元素即可，如schools为一个list属性</span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">list</span> <span class="attr">name</span>=<span class="string">"schools"</span> <span class="attr">inverse</span>=<span class="string">"false"</span> <span class="attr">table</span>=<span class="string">"school"</span> <span class="attr">lazy</span>=<span class="string">"true"</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">key</span>&gt;</span>  </span><br><span class="line">         <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"person_id"</span> /&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;/<span class="name">key</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">list-index</span> <span class="attr">column</span>=<span class="string">"schools_order"</span>/&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">element</span> <span class="attr">type</span>=<span class="string">"java.lang.String"</span>&gt;</span>  </span><br><span class="line">         <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"school_name"</span> /&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;/<span class="name">element</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">list</span>&gt;</span>  </span><br><span class="line">B.如果<span class="tag">&lt;<span class="name">property</span>/&gt;</span>属性为组件属性，如Name类（Name是一个自定义类，含有first和last两个属性），置换成<span class="tag">&lt;<span class="name">component...</span>/&gt;</span>元素，要指定自定义类的路径</span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">class</span>=<span class="string">"zyw.app.componet.Name"</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"first"</span> <span class="attr">column</span>=<span class="string">"FIRST"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"last"</span> <span class="attr">column</span>=<span class="string">"LAST"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span>           </span><br><span class="line"><span class="tag">&lt;/<span class="name">component</span>&gt;</span>  </span><br><span class="line">同理</span><br><span class="line"></span><br><span class="line">如果组件属性里还有集合属性，继续A置换</span><br><span class="line"></span><br><span class="line">如果组件属性里还有组件属性，继续B置换，<span class="tag">&lt;<span class="name">component...</span>/&gt;</span>变成<span class="tag">&lt;<span class="name">nested-composite-element...</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">如果集合Map的索引属性为组件属性，继续B置换，<span class="tag">&lt;<span class="name">component...</span>/&gt;</span>变成<span class="tag">&lt;<span class="name">nested-composite-element...</span>/&gt;</span>，子元素为<span class="tag">&lt;<span class="name">key-property...</span>/&gt;</span>或<span class="tag">&lt;<span class="name">key-many-to-one...</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">C。如果<span class="tag">&lt;<span class="name">id...</span>/&gt;</span>为组件属性，组件类必须重写过equals和hashCode方法，<span class="tag">&lt;<span class="name">id...</span>/&gt;</span>元素置换为</span><br><span class="line"></span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">composite-id</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">class</span>=<span class="string">"xxx.xxx.xxx"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">key-property</span> <span class="attr">name</span>=<span class="string">"xxx"</span>/&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">key-property</span> <span class="attr">name</span>=<span class="string">"xxx"</span>/&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">composite-id</span>&gt;</span>  </span><br><span class="line">或者多列为联合主键,省去name和class属性即可，效果一样</span><br><span class="line">[html] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">composite-id</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">key-property</span> <span class="attr">name</span>=<span class="string">"xxx"</span>/&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">key-property</span> <span class="attr">name</span>=<span class="string">"xxx"</span>/&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">composite-id</span>&gt;</span>  </span><br><span class="line">五、JPAAnnotation标注实体</span><br><span class="line"></span><br><span class="line">[javascript] view plain copy</span><br><span class="line"><span class="tag">&lt;<span class="name">preclass="java"name="code"</span>&gt;</span>@Entity   </span><br><span class="line">@Table(name="person_table")   </span><br><span class="line">public class Person   </span><br><span class="line">&#123;   </span><br><span class="line">    /* 指定使用复合主键类是Name */   </span><br><span class="line">    @EmbeddedId   </span><br><span class="line">    @AttributeOverrides(&#123;   </span><br><span class="line">        @AttributeOverride(name="first"   </span><br><span class="line">            , column=@Column(name="person_first")),   </span><br><span class="line">        @AttributeOverride(name="last"   </span><br><span class="line">            , column=@Column(name="person_last" , length=20))   </span><br><span class="line">    &#125;)   </span><br><span class="line">    private Name name;   </span><br><span class="line">    //普通属性   </span><br><span class="line">    @Column(name="person_email")   </span><br><span class="line">    private String email;   </span><br><span class="line">    @Embedded   </span><br><span class="line">    @AttributeOverrides(&#123;   </span><br><span class="line">        @AttributeOverride(name="name"    </span><br><span class="line">            , column=@Column(name="cat_name" , length=35)),   </span><br><span class="line">        @AttributeOverride(name="color"    </span><br><span class="line">            , column=@Column(name="cat_color"))   </span><br><span class="line">    &#125;)   </span><br><span class="line">    //组件属性，代表此人拥有的宠物   </span><br><span class="line">    private Cat pet;   </span><br><span class="line">   </span><br><span class="line">    //name属性的setter和getter方法   </span><br><span class="line">    public void setName(Name name)   </span><br><span class="line">    &#123;   </span><br><span class="line">        this.name = name;   </span><br><span class="line">    &#125;   </span><br><span class="line">    public Name getName()   </span><br><span class="line">    &#123;   </span><br><span class="line">        return this.name;   </span><br><span class="line">    &#125;   </span><br><span class="line">       </span><br><span class="line">    //email属性的setter和getter方法   </span><br><span class="line">    public void setEmail(String email)   </span><br><span class="line">    &#123;   </span><br><span class="line">        this.email = email;   </span><br><span class="line">    &#125;   </span><br><span class="line">    public String getEmail()   </span><br><span class="line">    &#123;   </span><br><span class="line">        return this.email;   </span><br><span class="line">    &#125;   </span><br><span class="line">       </span><br><span class="line">    //pet属性的setter和getter方法   </span><br><span class="line">    public void setPet(Cat pet)   </span><br><span class="line">    &#123;   </span><br><span class="line">        this.pet = pet;   </span><br><span class="line">    &#125;   </span><br><span class="line">    public Cat getPet()   </span><br><span class="line">    &#123;   </span><br><span class="line">        return this.pet;   </span><br><span class="line">    &#125;   </span><br><span class="line">&#125;<span class="tag">&lt;/<span class="name">pre</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">preclass="html"name="code"</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks !<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.imgur.com/M76F6Lc.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.imgur.com/YVha4zN.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hibernate</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://flynee.github.com/2018/04/21/hibernate配置文件hibernate-cfg-xml和-hbm-xml相关解释-md/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/05/01/HQL数据查询/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          HQL数据查询
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/04/12/Hibernate/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hibernate</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
         </div>
       </div>
       <footer id="footer">
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 大魔王
-    	</div>
-      	<div class="footer-right">
-      		<a href="#" target="_blank"></a>  <a href="#" target="_blank">power by Litten</a> 
-      	</div>
+    		&copy; 2018 Flynee
+        <span id="busuanzi_container_site_uv">
+              &nbsp;&nbsp;&nbsp;&nbsp;本站访客数:<span id="busuanzi_value_site_uv"></span> 人次
+          </span>
+      </div>
+      <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -258,6 +390,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
+    
+      
       
       
     
@@ -268,6 +402,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
       
       <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
       
         
       
@@ -290,13 +426,53 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Her</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">冬</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -339,7 +515,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">情感专家&lt;br&gt;&lt;br&gt;情感顾问&lt;br&gt;&lt;br&gt;全球绿帽子协会主席</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">若你要离开 &lt;br/&gt; 我和我的生活将一起凋零 &lt;br/&gt;</div>
   	  	
     	</section>
     
