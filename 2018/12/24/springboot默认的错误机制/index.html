@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/Flynee">
-  <title>Archives: 2018 | 魔宫</title>
+  <title>springboot默认的错误机制 | 魔宫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="魔宫">
-<meta property="og:url" content="https://github.com/Flynee/archives/2018/index.html">
+  <meta name="description" content="默认的错误机制 如果是浏览器，返回一个默认的错误页面 如果是其他客户端，默认响应一个json数据 原理可以参照ErrorMvcAutoConfiguration;默认处理的自动配置  定制错误响应 有模板引擎的情况下，在templates目录下新建error目录，将错误页面放进去，没有模板引擎就放在静态资源文件夹下  我们可以使用4xx和5xx作为文件名来匹配这种类型的所有错误，精确优先（优先寻找">
+<meta name="keywords" content="springboot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springboot默认的错误机制">
+<meta property="og:url" content="https://github.com/Flynee/2018/12/24/springboot默认的错误机制/index.html">
 <meta property="og:site_name" content="魔宫">
+<meta property="og:description" content="默认的错误机制 如果是浏览器，返回一个默认的错误页面 如果是其他客户端，默认响应一个json数据 原理可以参照ErrorMvcAutoConfiguration;默认处理的自动配置  定制错误响应 有模板引擎的情况下，在templates目录下新建error目录，将错误页面放进去，没有模板引擎就放在静态资源文件夹下  我们可以使用4xx和5xx作为文件名来匹配这种类型的所有错误，精确优先（优先寻找">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-24T05:24:50.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="魔宫">
+<meta name="twitter:title" content="springboot默认的错误机制">
+<meta name="twitter:description" content="默认的错误机制 如果是浏览器，返回一个默认的错误页面 如果是其他客户端，默认响应一个json数据 原理可以参照ErrorMvcAutoConfiguration;默认处理的自动配置  定制错误响应 有模板引擎的情况下，在templates目录下新建error目录，将错误页面放进去，没有模板引擎就放在静态资源文件夹下  我们可以使用4xx和5xx作为文件名来匹配这种类型的所有错误，精确优先（优先寻找">
   
     <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
   
@@ -138,63 +143,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-springboot默认的错误机制" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/24/配置嵌入式的Servlet容器/" class="archive-article-date">
-  	<time datetime="2018-12-24T03:27:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/24/配置嵌入式的Servlet容器/">配置嵌入式的Servlet容器</a>
+    <h1 class="article-title" itemprop="name">
+      springboot默认的错误机制
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/24/springboot默认的错误机制/" class="archive-article-date">
+        
+        <a href="/2018/12/24/springboot默认的错误机制/" class="archive-article-date">
   	<time datetime="2018-12-24T02:27:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/24/springboot默认的错误机制/">springboot默认的错误机制</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="默认的错误机制"><a href="#默认的错误机制" class="headerlink" title="默认的错误机制"></a>默认的错误机制</h3><ol>
+<li>如果是浏览器，返回一个默认的错误页面</li>
+<li>如果是其他客户端，默认响应一个json数据</li>
+<li>原理可以参照ErrorMvcAutoConfiguration;默认处理的自动配置</li>
+</ol>
+<h3 id="定制错误响应"><a href="#定制错误响应" class="headerlink" title="定制错误响应"></a>定制错误响应</h3><ol>
+<li>有模板引擎的情况下，在templates目录下新建error目录，将错误页面放进去，没有模板引擎就放在静态资源文件夹下 </li>
+<li>我们可以使用4xx和5xx作为文件名来匹配这种类型的所有错误，精确优先（优先寻找精确状态码.html）</li>
+<li>页面能获取到的信息<ol>
+<li>timestamp: 时间戳</li>
+<li>status: 状态码</li>
+<li>error: 错误提示</li>
+<li>exception：异常对象</li>
+<li>errors: JSR303数据校验的错误都在这里<br><code>`</code> java</li>
+</ol>
+</li>
+</ol>
+<p>@ControllerAdvice<br>public class MyExceptionHandler {</p>
+<p>//返回json数据，没有自适应功能<br>//    @ResponseBody<br>//    @ExceptionHandler(UserNotExistException.class)<br>//    public Map&lt;String, Object&gt; handleException(Exception e) {<br>//        Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();<br>//        map.put(“code”, “user.notexist”);<br>//        map.put(“message”, “用户出错”);<br>//        return map;<br>//    }</p>
+<pre><code>@ResponseBody
+@ExceptionHandler(UserNotExistException.class)
+public Map&lt;String, Object&gt; handleException(Exception e, HttpServletRequest request) {
+    Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();
 
-        <div class="article-info info-on-right">
-          
+    //传入我们自己的错误代码，使其能够自适应手机和浏览器
+    request.setAttribute(&quot;javax.servlet.erro.status_code&quot;, 500);
+    map.put(&quot;code&quot;, &quot;user.notexist&quot;);
+    map.put(&quot;message&quot;, &quot;用户出错&quot;);
+    return map;
+}
+</code></pre><p>}</p>
+<p><code>`</code>  </p>
+<ol start="4">
+<li>将我们自定义的数据携带出去，编写AbstractErrorController子类。重写里面相关的方法</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -206,326 +217,114 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Flynee/2018/12/24/springboot默认的错误机制/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/登录&拦截器/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.936Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/12/24/配置嵌入式的Servlet容器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          配置嵌入式的Servlet容器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/22/登录&拦截器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">登录&amp;拦截器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/登录&拦截器/">登录&amp;拦截器</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/日志框架/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.928Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/日志框架/">日志框架</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/扩展与全面接管SpringMVC/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/扩展与全面接管SpringMVC/">扩展与全面接管SpringMVC</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/引入web静态资源/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.911Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/引入web静态资源/">引入web静态资源</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/引入thymeleaf/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.909Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/引入thymeleaf/">引入thymeleaf</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/webjar&静态资源的映射规则/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.900Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/webjar&静态资源的映射规则/">webjar&amp;静态资源的映射规则</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/SpringBoot自动配置原理/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.898Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/SpringBoot自动配置原理/">SpringBoot自动配置原理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/22/springboot基础/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.883Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/springboot基础/">springboot基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -549,8 +348,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
