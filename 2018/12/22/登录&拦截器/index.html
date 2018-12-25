@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/Flynee">
   <title>登录&amp;拦截器 | 魔宫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="登录与拦截器idea设置页面刷新，1) 禁用模板引擎的缓存spring.thymeleaf.cache=false2) 在修改后的html页面按Ctrl+F9重新编译页面即可     未添加拦截器进行登录` java@Controllerpublic class LoginController {  //@RequestMapping(value = &amp;quot;/user/login&amp;quot;">
+  <meta name="description" content="登录与拦截器idea设置页面刷新，1) 禁用模板引擎的缓存spring.thymeleaf.cache=false2) 在修改后的html页面按Ctrl+F9重新编译页面即可     未添加拦截器进行登录   @Controller public class LoginController {       //@RequestMapping(value = &quot;/user/login&quot;, metho">
 <meta name="keywords" content="springboot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="登录&amp;拦截器">
 <meta property="og:url" content="https://github.com/Flynee/2018/12/22/登录&拦截器/index.html">
 <meta property="og:site_name" content="魔宫">
-<meta property="og:description" content="登录与拦截器idea设置页面刷新，1) 禁用模板引擎的缓存spring.thymeleaf.cache=false2) 在修改后的html页面按Ctrl+F9重新编译页面即可     未添加拦截器进行登录` java@Controllerpublic class LoginController {  //@RequestMapping(value = &amp;quot;/user/login&amp;quot;">
+<meta property="og:description" content="登录与拦截器idea设置页面刷新，1) 禁用模板引擎的缓存spring.thymeleaf.cache=false2) 在修改后的html页面按Ctrl+F9重新编译页面即可     未添加拦截器进行登录   @Controller public class LoginController {       //@RequestMapping(value = &quot;/user/login&quot;, metho">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-22T08:15:03.545Z">
+<meta property="og:updated_time" content="2018-12-25T10:05:33.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="登录&amp;拦截器">
-<meta name="twitter:description" content="登录与拦截器idea设置页面刷新，1) 禁用模板引擎的缓存spring.thymeleaf.cache=false2) 在修改后的html页面按Ctrl+F9重新编译页面即可     未添加拦截器进行登录` java@Controllerpublic class LoginController {  //@RequestMapping(value = &amp;quot;/user/login&amp;quot;">
+<meta name="twitter:description" content="登录与拦截器idea设置页面刷新，1) 禁用模板引擎的缓存spring.thymeleaf.cache=false2) 在修改后的html页面按Ctrl+F9重新编译页面即可     未添加拦截器进行登录   @Controller public class LoginController {       //@RequestMapping(value = &quot;/user/login&quot;, metho">
   
     <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
   
@@ -166,74 +166,90 @@
         <h3 id="登录与拦截器"><a href="#登录与拦截器" class="headerlink" title="登录与拦截器"></a>登录与拦截器</h3><p>idea设置页面刷新，<br>1) 禁用模板引擎的缓存spring.thymeleaf.cache=false<br>2) 在修改后的html页面按Ctrl+F9重新编译页面即可  </p>
 <hr>
 <ol>
-<li>未添加拦截器进行登录<br><code>`</code> java<br>@Controller<br>public class LoginController {</li>
+<li>未添加拦截器进行登录 </li>
 </ol>
-<pre><code>//@RequestMapping(value = &quot;/user/login&quot;, method = RequestMethod.POST)
-@PostMapping(value = &quot;/user/login&quot;)
-public String login(@RequestParam(&quot;username&quot;) String username,
-                    @RequestParam(&quot;password&quot;) String password,
-                    Map&lt;String, Object&gt; map),
-                     HttpSession session{
-    if(!StringUtils.isEmpty(username) &amp;&amp; &quot;123456&quot;.equals(password)){
-        //将登录信息保存在session中
-        session.setAttribute(&quot;loginUser&quot;, username);
-        //登陆成功，防止表单重复提交，可以重定向到主页
-        return &quot;redirect:/main.html&quot;;//这里需要给main.html添加试图解析器
-    }else{
-        //登陆失败
-        map.put(&quot;msg&quot;, &quot;用户名密码错误&quot;);
-        return &quot;login&quot;;
+<pre><code class="java"><span class="meta">@Controller</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginController</span> </span>{
+
+
+    <span class="comment">//@RequestMapping(value = "/user/login", method = RequestMethod.POST)</span>
+    <span class="meta">@PostMapping</span>(value = <span class="string">"/user/login"</span>)
+    <span class="function"><span class="keyword">public</span> String <span class="title">login</span><span class="params">(@RequestParam(<span class="string">"username"</span>)</span> String username,</span>
+<span class="function">                        @<span class="title">RequestParam</span><span class="params">(<span class="string">"password"</span>)</span> String password,</span>
+<span class="function">                        Map&lt;String, Object&gt; map),</span>
+<span class="function">                         HttpSession session</span>{
+        <span class="keyword">if</span>(!StringUtils.isEmpty(username) &amp;&amp; <span class="string">"123456"</span>.equals(password)){
+            <span class="comment">//将登录信息保存在session中</span>
+            session.setAttribute(<span class="string">"loginUser"</span>, username);
+            <span class="comment">//登陆成功，防止表单重复提交，可以重定向到主页</span>
+            <span class="keyword">return</span> <span class="string">"redirect:/main.html"</span>;<span class="comment">//这里需要给main.html添加试图解析器</span>
+        }<span class="keyword">else</span>{
+            <span class="comment">//登陆失败</span>
+            map.put(<span class="string">"msg"</span>, <span class="string">"用户名密码错误"</span>);
+            <span class="keyword">return</span> <span class="string">"login"</span>;
+        }
     }
 }
-</code></pre><p>}</p>
-<p>//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了<br>//使用webMvcConfigurerAdapter可以来扩展SpringMVC的功能<br>@Configuration<br>public class MyConfig extends WebMvcConfigurationSupport {</p>
-<pre><code>@Override
-public void addViewControllers(ViewControllerRegistry registry) {
-    //设置浏览器请求/me 跳转到success页面
-    registry.addViewController(&quot;/&quot;).setViewName(&quot;index&quot;);
-    registry.addViewController(&quot;/index.html&quot;).setViewName(&quot;index&quot;);
-    //登录页面跳转
-    registry.addViewController(&quot;/main.html&quot;).setViewName(&quot;dashboard&quot;);
+
+
+<span class="comment">//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了</span>
+<span class="comment">//使用webMvcConfigurerAdapter可以来扩展SpringMVC的功能</span>
+<span class="meta">@Configuration</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurationSupport</span> </span>{
+
+
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>{
+        <span class="comment">//设置浏览器请求/me 跳转到success页面</span>
+        registry.addViewController(<span class="string">"/"</span>).setViewName(<span class="string">"index"</span>);
+        registry.addViewController(<span class="string">"/index.html"</span>).setViewName(<span class="string">"index"</span>);
+        <span class="comment">//登录页面跳转</span>
+        registry.addViewController(<span class="string">"/main.html"</span>).setViewName(<span class="string">"dashboard"</span>);
+    }
+
+
+    <span class="meta">@Bean</span><span class="comment">//将组件添加到容器里</span>
+    <span class="function"><span class="keyword">public</span> LocaleResolver <span class="title">localeResolver</span><span class="params">()</span></span>{
+        <span class="keyword">return</span> <span class="keyword">new</span> MyLocaleResolver();
+    }
 }
 
 
-@Bean//将组件添加到容器里
-public LocaleResolver localeResolver(){
-    return new MyLocaleResolver();
-}
-</code></pre><p>}</p>
-<pre><code>2. 拦截器进行登录检查
-1) 实现一个拦截器类  
-``` java
 
-public class LoginHandlerItereceptor implements HandlerInterceptor {
+</code></pre>
+<ol start="2">
+<li>拦截器进行登录检查<br>1) 实现一个拦截器类  </li>
+</ol>
+<pre><code class="java">
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginHandlerItereceptor</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>{
 
-    //目标方法执行之前
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Object user = request.getSession().getAttribute(&quot;loginUser&quot;);
-        if(user == null){
-            //未登录
-            request.setAttribute(&quot;msg&quot;, &quot;请先登录！&quot;);
-            request.getRequestDispatcher(&quot;/index.html&quot;).forward(request, response);
-            return false;
-        }else{
-            //已登录，放行请求
-            return true;
+    <span class="comment">//目标方法执行之前</span>
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception </span>{
+        Object user = request.getSession().getAttribute(<span class="string">"loginUser"</span>);
+        <span class="keyword">if</span>(user == <span class="keyword">null</span>){
+            <span class="comment">//未登录</span>
+            request.setAttribute(<span class="string">"msg"</span>, <span class="string">"请先登录！"</span>);
+            request.getRequestDispatcher(<span class="string">"/index.html"</span>).forward(request, response);
+            <span class="keyword">return</span> <span class="keyword">false</span>;
+        }<span class="keyword">else</span>{
+            <span class="comment">//已登录，放行请求</span>
+            <span class="keyword">return</span> <span class="keyword">true</span>;
         }
     }
 
-    @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)</span> <span class="keyword">throws</span> Exception </span>{
 
     }
 
-    @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterCompletion</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)</span> <span class="keyword">throws</span> Exception </span>{
 
     }
 }
-</code></pre><p>2) 将拦截器组件添加到容器中  </p>
+</code></pre>
+<p>2) 将拦截器组件添加到容器中  </p>
 <pre><code class="java"><span class="meta">@Bean</span><span class="comment">//将组件添加到容器里</span>
    <span class="function"><span class="keyword">public</span> WebMvcConfigurationSupport <span class="title">webMvcConfigurationSupport</span><span class="params">()</span></span>{
 
