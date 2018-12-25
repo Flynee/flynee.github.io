@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="魔宫">
 <meta property="og:description" content="默认的错误机制 如果是浏览器，返回一个默认的错误页面 如果是其他客户端，默认响应一个json数据 原理可以参照ErrorMvcAutoConfiguration;默认处理的自动配置  定制错误响应 有模板引擎的情况下，在templates目录下新建error目录，将错误页面放进去，没有模板引擎就放在静态资源文件夹下  我们可以使用4xx和5xx作为文件名来匹配这种类型的所有错误，精确优先（优先寻找">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-24T05:24:50.548Z">
+<meta property="og:updated_time" content="2018-12-25T05:20:35.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot默认的错误机制">
 <meta name="twitter:description" content="默认的错误机制 如果是浏览器，返回一个默认的错误页面 如果是其他客户端，默认响应一个json数据 原理可以参照ErrorMvcAutoConfiguration;默认处理的自动配置  定制错误响应 有模板引擎的情况下，在templates目录下新建error目录，将错误页面放进去，没有模板引擎就放在静态资源文件夹下  我们可以使用4xx和5xx作为文件名来匹配这种类型的所有错误，精确优先（优先寻找">
@@ -182,16 +182,17 @@
 </ol>
 <p>@ControllerAdvice<br>public class MyExceptionHandler {</p>
 <p>//返回json数据，没有自适应功能<br>//    @ResponseBody<br>//    @ExceptionHandler(UserNotExistException.class)<br>//    public Map&lt;String, Object&gt; handleException(Exception e) {<br>//        Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();<br>//        map.put(“code”, “user.notexist”);<br>//        map.put(“message”, “用户出错”);<br>//        return map;<br>//    }</p>
-<pre><code>@ResponseBody
-@ExceptionHandler(UserNotExistException.class)
-public Map&lt;String, Object&gt; handleException(Exception e, HttpServletRequest request) {
+<pre><code>@ExceptionHandler(UserNotExistException.class)
+public String handleException(Exception e, HttpServletRequest request) {
     Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();
 
     //传入我们自己的错误代码，使其能够自适应手机和浏览器
     request.setAttribute(&quot;javax.servlet.erro.status_code&quot;, 500);
     map.put(&quot;code&quot;, &quot;user.notexist&quot;);
     map.put(&quot;message&quot;, &quot;用户出错&quot;);
-    return map;
+    request.setAttribute(&quot;ext&quot;, map);
+    //转发到/error
+    return &quot;forward:/error&quot;;
 }
 </code></pre><p>}</p>
 <p><code>`</code>  </p>
@@ -280,15 +281,6 @@ public Map&lt;String, Object&gt; handleException(Exception e, HttpServletRequest
 
   
 <nav id="article-nav">
-  
-    <a href="/2018/12/24/配置嵌入式的Servlet容器/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          配置嵌入式的Servlet容器
-        
-      </div>
-    </a>
   
   
     <a href="/2018/12/22/登录&拦截器/" id="article-nav-older" class="article-nav-link-wrap">
