@@ -370,26 +370,40 @@ server.tomcat.xxx
 <li>status: 状态码</li>
 <li>error: 错误提示</li>
 <li>exception：异常对象</li>
-<li>errors: JSR303数据校验的错误都在这里<br><code>`</code> java</li>
+<li>errors: JSR303数据校验的错误都在这里  </li>
 </ol>
 </li>
 </ol>
-<p>@ControllerAdvice<br>public class MyExceptionHandler {</p>
-<p>//返回json数据，没有自适应功能<br>//    @ResponseBody<br>//    @ExceptionHandler(UserNotExistException.class)<br>//    public Map&lt;String, Object&gt; handleException(Exception e) {<br>//        Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();<br>//        map.put(“code”, “user.notexist”);<br>//        map.put(“message”, “用户出错”);<br>//        return map;<br>//    }</p>
-<pre><code>@ExceptionHandler(UserNotExistException.class)
-public String handleException(Exception e, HttpServletRequest request) {
-    Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();
+<pre><code class="java">
+<span class="meta">@ControllerAdvice</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyExceptionHandler</span> </span>{
 
-    //传入我们自己的错误代码，使其能够自适应手机和浏览器
-    request.setAttribute(&quot;javax.servlet.erro.status_code&quot;, 500);
-    map.put(&quot;code&quot;, &quot;user.notexist&quot;);
-    map.put(&quot;message&quot;, &quot;用户出错&quot;);
-    request.setAttribute(&quot;ext&quot;, map);
-    //转发到/error
-    return &quot;forward:/error&quot;;
+<span class="comment">//返回json数据，没有自适应功能</span>
+<span class="comment">//    @ResponseBody</span>
+<span class="comment">//    @ExceptionHandler(UserNotExistException.class)</span>
+<span class="comment">//    public Map&lt;String, Object&gt; handleException(Exception e) {</span>
+<span class="comment">//        Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();</span>
+<span class="comment">//        map.put("code", "user.notexist");</span>
+<span class="comment">//        map.put("message", "用户出错");</span>
+<span class="comment">//        return map;</span>
+<span class="comment">//    }</span>
+
+    <span class="meta">@ExceptionHandler</span>(UserNotExistException.class)
+    <span class="function"><span class="keyword">public</span> String <span class="title">handleException</span><span class="params">(Exception e, HttpServletRequest request)</span> </span>{
+        Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();
+
+        <span class="comment">//传入我们自己的错误代码，使其能够自适应手机和浏览器</span>
+        request.setAttribute(<span class="string">"javax.servlet.erro.status_code"</span>, <span class="number">500</span>);
+        map.put(<span class="string">"code"</span>, <span class="string">"user.notexist"</span>);
+        map.put(<span class="string">"message"</span>, <span class="string">"用户出错"</span>);
+        request.setAttribute(<span class="string">"ext"</span>, map);
+        <span class="comment">//转发到/error</span>
+        <span class="keyword">return</span> <span class="string">"forward:/error"</span>;
+    }
+
 }
-</code></pre><p>}</p>
-<p><code>`</code>  </p>
+
+</code></pre>
 <ol start="4">
 <li>将我们自定义的数据携带出去，编写AbstractErrorController子类。重写里面相关的方法</li>
 </ol>
