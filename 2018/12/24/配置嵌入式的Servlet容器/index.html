@@ -8,14 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/Flynee">
   <title>配置嵌入式的Servlet容器 | 魔宫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="修改和Servlet容器相关的配置 修改server有关的配置（ServerProperties）    123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778">
+<meta name="keywords" content="springboot">
+<meta property="og:type" content="article">
 <meta property="og:title" content="配置嵌入式的Servlet容器">
 <meta property="og:url" content="https://github.com/Flynee/2018/12/24/配置嵌入式的Servlet容器/index.html">
 <meta property="og:site_name" content="魔宫">
+<meta property="og:description" content="修改和Servlet容器相关的配置 修改server有关的配置（ServerProperties）    123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-24T03:27:45.629Z">
+<meta property="og:updated_time" content="2018-12-25T09:44:57.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="配置嵌入式的Servlet容器">
+<meta name="twitter:description" content="修改和Servlet容器相关的配置 修改server有关的配置（ServerProperties）    123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778">
   
     <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
   
@@ -159,7 +163,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="修改和Servlet容器相关的配置"><a href="#修改和Servlet容器相关的配置" class="headerlink" title="修改和Servlet容器相关的配置"></a>修改和Servlet容器相关的配置</h3><ol>
+<li>修改server有关的配置（ServerProperties）  </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line">//通用的Servlet容器的设置</span><br><span class="line">server.xxx</span><br><span class="line">server.port = 8081</span><br><span class="line">server.context-path = /curd</span><br><span class="line"></span><br><span class="line">//通用Tomcat设置</span><br><span class="line">server.tomcat.xxx</span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line">2. 编写一个配置类来修改Servlet容器的配置</span><br><span class="line"></span><br><span class="line">``` java</span><br><span class="line"></span><br><span class="line">//嵌入式Servlet配置</span><br><span class="line">    @Bean</span><br><span class="line">    public WebServerFactoryCustomizer webServerFactoryCustomizer() &#123;</span><br><span class="line">        return new WebServerFactoryCustomizer&lt;ConfigurableServletWebServerFactory&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void customize(ConfigurableServletWebServerFactory factory) &#123;</span><br><span class="line">                factory.setPort(8090);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">```  </span><br><span class="line"> &lt;!--more--&gt;</span><br><span class="line">### 注册Servlet、Filter、Listener</span><br><span class="line">1. 注册三大组件（以Servlet为例）</span><br><span class="line">``` java</span><br><span class="line">1.</span><br><span class="line">//自定义Servlet</span><br><span class="line">public class MyServlet extends HttpServlet &#123;</span><br><span class="line"></span><br><span class="line">    //处理get请求</span><br><span class="line">    @Override</span><br><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span><br><span class="line">        doPost(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span><br><span class="line">        resp.getWriter().write(&quot;hello myservlet&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//自定义Filter</span><br><span class="line"></span><br><span class="line">public class MyFilter implements Filter &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void init(FilterConfig filterConfig) throws ServletException &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException &#123;</span><br><span class="line">        System.out.println(&quot;MyFilter 执行了&quot;);</span><br><span class="line">        chain.doFilter(request, response);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void destroy() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//自定义Listener</span><br><span class="line"></span><br><span class="line">public class Mylistener implements ServletContextListener &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void contextInitialized(ServletContextEvent sce) &#123;</span><br><span class="line">        System.out.println(&quot;contextInitalized ... web应用启动&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void contextDestroyed(ServletContextEvent sce) &#123;</span><br><span class="line">        System.out.println(&quot;contextDestroyed.... web项目销毁&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2.注册Servlet</span><br><span class="line">@Configuration</span><br><span class="line">public class MyServletConfig &#123;</span><br><span class="line"></span><br><span class="line">    //注册三大组件</span><br><span class="line"></span><br><span class="line">    //注册Servlet</span><br><span class="line">    @Bean</span><br><span class="line">    public ServletRegistrationBean myServlet() &#123;</span><br><span class="line">        ServletRegistrationBean registrationBean =</span><br><span class="line">                new ServletRegistrationBean(new MyServlet(), &quot;/myServlet&quot;);</span><br><span class="line">        return registrationBean;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //注册Filter</span><br><span class="line">    @Bean</span><br><span class="line">    public FilterRegistrationBean myFilter() &#123;</span><br><span class="line"></span><br><span class="line">        FilterRegistrationBean registrationBean = new FilterRegistrationBean();</span><br><span class="line"></span><br><span class="line">        registrationBean.setFilter(new MyFilter());</span><br><span class="line">        //要拦截的URL路径</span><br><span class="line">        registrationBean.setUrlPatterns(Arrays.asList(&quot;hello&quot;, &quot;/myServlet&quot;));</span><br><span class="line">        return registrationBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //注册listener</span><br><span class="line">    @Bean</span><br><span class="line">    public ServletListenerRegistrationBean myListener() &#123;</span><br><span class="line">        ServletListenerRegistrationBean&lt;Mylistener&gt; registrationBean =</span><br><span class="line">                new ServletListenerRegistrationBean&lt;Mylistener&gt;(new Mylistener());</span><br><span class="line">        return registrationBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    //嵌入式Servlet配置</span><br><span class="line">    @Bean</span><br><span class="line">    public WebServerFactoryCustomizer webServerFactoryCustomizer() &#123;</span><br><span class="line">        return new WebServerFactoryCustomizer&lt;ConfigurableServletWebServerFactory&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void customize(ConfigurableServletWebServerFactory factory) &#123;</span><br><span class="line">                factory.setPort(8090);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>  
+<h3 id="切换其他Servlet容器"><a href="#切换其他Servlet容器" class="headerlink" title="切换其他Servlet容器"></a>切换其他Servlet容器</h3><p>Jetty(长连接)，比如两用户持续聊天<br>Undertow不支持JSP，高并发非阻塞  </p>
+<hr>
+<p>默认支持Tomcat，Jetty, Undertow, 切换时候更换相关的dependency就行了  </p>
+<h3 id="使用外置的Servlet容器"><a href="#使用外置的Servlet容器" class="headerlink" title="使用外置的Servlet容器"></a>使用外置的Servlet容器</h3><ol>
+<li>必须创建一个war项目</li>
+<li>将嵌入式的Tomcat指定为provided</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.soringframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;</span><br><span class="line">	&lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line">3. 必须编写一个SpringBootServletInitializer的子类，并调用configure方法</span><br><span class="line"></span><br><span class="line">``` java</span><br><span class="line"></span><br><span class="line">public class ServletInitailizer extends SpringBootServletInitailizer &#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) &#123;</span><br><span class="line"></span><br><span class="line">		//传入SpringBoot应用的主程序</span><br><span class="line">		return application.sources(SpringBootTestApplication.class);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>启动服务器就行了  </li>
+</ol>
+
       
 
       
@@ -167,6 +187,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -230,6 +261,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/12/25/Docker/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Docker
+        
+      </div>
+    </a>
   
   
     <a href="/2018/12/24/springboot默认的错误机制/" id="article-nav-older" class="article-nav-link-wrap">
@@ -349,6 +389,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
