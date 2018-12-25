@@ -258,12 +258,12 @@ docker logs container -name/container-id        //容器日志
         <h3 id="修改和Servlet容器相关的配置"><a href="#修改和Servlet容器相关的配置" class="headerlink" title="修改和Servlet容器相关的配置"></a>修改和Servlet容器相关的配置</h3><ol>
 <li>修改server有关的配置（ServerProperties）  </li>
 </ol>
-<pre><code class="propertities">//通用的Servlet容器的设置
+<pre><code class="java"><span class="comment">//通用的Servlet容器的设置</span>
 server.xxx
-server.port = 8081
+server.port = <span class="number">8081</span>
 server.context-path = /curd
 
-//通用Tomcat设置
+<span class="comment">//通用Tomcat设置</span>
 server.tomcat.xxx
 
 </code></pre>

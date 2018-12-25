@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="魔宫">
 <meta property="og:description" content="修改和Servlet容器相关的配置 修改server有关的配置（ServerProperties）    //通用的Servlet容器的设置 server.xxx server.port = 8081 server.context-path = /curd  //通用Tomcat设置 server.tomcat.xxx    编写一个配置类来修改Servlet容器的配置   //嵌入式Servle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-25T09:56:29.288Z">
+<meta property="og:updated_time" content="2018-12-25T10:00:07.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="配置嵌入式的Servlet容器">
 <meta name="twitter:description" content="修改和Servlet容器相关的配置 修改server有关的配置（ServerProperties）    //通用的Servlet容器的设置 server.xxx server.port = 8081 server.context-path = /curd  //通用Tomcat设置 server.tomcat.xxx    编写一个配置类来修改Servlet容器的配置   //嵌入式Servle">
@@ -166,12 +166,12 @@
         <h3 id="修改和Servlet容器相关的配置"><a href="#修改和Servlet容器相关的配置" class="headerlink" title="修改和Servlet容器相关的配置"></a>修改和Servlet容器相关的配置</h3><ol>
 <li>修改server有关的配置（ServerProperties）  </li>
 </ol>
-<pre><code class="propertities">//通用的Servlet容器的设置
+<pre><code class="java"><span class="comment">//通用的Servlet容器的设置</span>
 server.xxx
-server.port = 8081
+server.port = <span class="number">8081</span>
 server.context-path = /curd
 
-//通用Tomcat设置
+<span class="comment">//通用Tomcat设置</span>
 server.tomcat.xxx
 
 </code></pre>
@@ -304,7 +304,7 @@ server.tomcat.xxx
 <li>必须创建一个war项目</li>
 <li>将嵌入式的Tomcat指定为provided</li>
 </ol>
-<pre><code class="propertities">
+<pre><code class="java">
 &lt;dependency&gt;
     &lt;groupId&gt;org.soringframework.boot&lt;/groupId&gt;
     &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
@@ -313,7 +313,7 @@ server.tomcat.xxx
 
 </code></pre>
 <ol start="3">
-<li>必须编写一个SpringBootServletInitializer的子类，并调用configure方法</li>
+<li>必须编写一个SpringBootServletInitializer的子类，并调用configure方法  </li>
 </ol>
 <pre><code class="java">
 <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServletInitailizer</span> <span class="keyword">extends</span> <span class="title">SpringBootServletInitailizer</span> </span>{
