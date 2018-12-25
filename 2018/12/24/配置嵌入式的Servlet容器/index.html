@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="魔宫">
 <meta property="og:description" content="修改和Servlet容器相关的配置 修改server有关的配置（ServerProperties）    //通用的Servlet容器的设置 server.xxx server.port = 8081 server.context-path = /curd  //通用Tomcat设置 server.tomcat.xxx    编写一个配置类来修改Servlet容器的配置   //嵌入式Servle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-25T09:51:36.697Z">
+<meta property="og:updated_time" content="2018-12-25T09:56:29.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="配置嵌入式的Servlet容器">
 <meta name="twitter:description" content="修改和Servlet容器相关的配置 修改server有关的配置（ServerProperties）    //通用的Servlet容器的设置 server.xxx server.port = 8081 server.context-path = /curd  //通用Tomcat设置 server.tomcat.xxx    编写一个配置类来修改Servlet容器的配置   //嵌入式Servle">
@@ -192,105 +192,127 @@ server.tomcat.xxx
 </code></pre>
 <a id="more"></a>  
 <h3 id="注册Servlet、Filter、Listener"><a href="#注册Servlet、Filter、Listener" class="headerlink" title="注册Servlet、Filter、Listener"></a>注册Servlet、Filter、Listener</h3><ol>
-<li><p>注册三大组件（以Servlet为例）<br><code>`</code> java<br>1.<br>//自定义Servlet<br>public class MyServlet extends HttpServlet {</p>
-<p> //处理get请求<br> @Override<br> protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {</p>
-<pre><code>doPost(req, resp);
-</code></pre><p> }</p>
-<p> @Override<br> protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {</p>
-<pre><code>resp.getWriter().write(&quot;hello myservlet&quot;);
-</code></pre><p> }<br>}</p>
-</li>
+<li>注册三大组件（以Servlet为例）  </li>
 </ol>
-<p>//自定义Filter</p>
-<p>public class MyFilter implements Filter {</p>
-<pre><code>@Override
-public void init(FilterConfig filterConfig) throws ServletException {
+<pre><code class="java"><span class="number">1</span>.
+<span class="comment">//自定义Servlet</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>{
+
+    <span class="comment">//处理get请求</span>
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>{
+        doPost(req, resp);
+    }
+
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>{
+        resp.getWriter().write(<span class="string">"hello myservlet"</span>);
+    }
 }
 
-@Override
-public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-    System.out.println(&quot;MyFilter 执行了&quot;);
-    chain.doFilter(request, response);
+<span class="comment">//自定义Filter</span>
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>{
+
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException </span>{
+    }
+
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response, FilterChain chain)</span> <span class="keyword">throws</span> IOException, ServletException </span>{
+        System.out.println(<span class="string">"MyFilter 执行了"</span>);
+        chain.doFilter(request, response);
+
+    }
+
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>{
+
+    }
+}
+
+<span class="comment">//自定义Listener</span>
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mylistener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span> </span>{
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent sce)</span> </span>{
+        System.out.println(<span class="string">"contextInitalized ... web应用启动"</span>);
+    }
+
+    <span class="meta">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextDestroyed</span><span class="params">(ServletContextEvent sce)</span> </span>{
+        System.out.println(<span class="string">"contextDestroyed.... web项目销毁"</span>);
+    }
+}
+
+<span class="number">2</span>.注册Servlet
+<span class="meta">@Configuration</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServletConfig</span> </span>{
+
+    <span class="comment">//注册三大组件</span>
+
+    <span class="comment">//注册Servlet</span>
+    <span class="meta">@Bean</span>
+    <span class="function"><span class="keyword">public</span> ServletRegistrationBean <span class="title">myServlet</span><span class="params">()</span> </span>{
+        ServletRegistrationBean registrationBean =
+                <span class="keyword">new</span> ServletRegistrationBean(<span class="keyword">new</span> MyServlet(), <span class="string">"/myServlet"</span>);
+        <span class="keyword">return</span> registrationBean;
+
+    }
+
+    <span class="comment">//注册Filter</span>
+    <span class="meta">@Bean</span>
+    <span class="function"><span class="keyword">public</span> FilterRegistrationBean <span class="title">myFilter</span><span class="params">()</span> </span>{
+
+        FilterRegistrationBean registrationBean = <span class="keyword">new</span> FilterRegistrationBean();
+
+        registrationBean.setFilter(<span class="keyword">new</span> MyFilter());
+        <span class="comment">//要拦截的URL路径</span>
+        registrationBean.setUrlPatterns(Arrays.asList(<span class="string">"hello"</span>, <span class="string">"/myServlet"</span>));
+        <span class="keyword">return</span> registrationBean;
+    }
+
+    <span class="comment">//注册listener</span>
+    <span class="meta">@Bean</span>
+    <span class="function"><span class="keyword">public</span> ServletListenerRegistrationBean <span class="title">myListener</span><span class="params">()</span> </span>{
+        ServletListenerRegistrationBean&lt;Mylistener&gt; registrationBean =
+                <span class="keyword">new</span> ServletListenerRegistrationBean&lt;Mylistener&gt;(<span class="keyword">new</span> Mylistener());
+        <span class="keyword">return</span> registrationBean;
+    }
+
+
+    <span class="comment">//嵌入式Servlet配置</span>
+    <span class="meta">@Bean</span>
+    <span class="function"><span class="keyword">public</span> WebServerFactoryCustomizer <span class="title">webServerFactoryCustomizer</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> <span class="keyword">new</span> WebServerFactoryCustomizer&lt;ConfigurableServletWebServerFactory&gt;() {
+            <span class="meta">@Override</span>
+            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">customize</span><span class="params">(ConfigurableServletWebServerFactory factory)</span> </span>{
+                factory.setPort(<span class="number">8090</span>);
+            }
+        };
+    }
 
 }
 
-@Override
-public void destroy() {
 
-}
-</code></pre><p>}</p>
-<p>//自定义Listener</p>
-<p>public class Mylistener implements ServletContextListener {<br>    @Override<br>    public void contextInitialized(ServletContextEvent sce) {<br>        System.out.println(“contextInitalized … web应用启动”);<br>    }</p>
-<pre><code>@Override
-public void contextDestroyed(ServletContextEvent sce) {
-    System.out.println(&quot;contextDestroyed.... web项目销毁&quot;);
-}
-</code></pre><p>}</p>
-<p>2.注册Servlet<br>@Configuration<br>public class MyServletConfig {</p>
-<pre><code>//注册三大组件
-
-//注册Servlet
-@Bean
-public ServletRegistrationBean myServlet() {
-    ServletRegistrationBean registrationBean =
-            new ServletRegistrationBean(new MyServlet(), &quot;/myServlet&quot;);
-    return registrationBean;
-
-}
-
-//注册Filter
-@Bean
-public FilterRegistrationBean myFilter() {
-
-    FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-
-    registrationBean.setFilter(new MyFilter());
-    //要拦截的URL路径
-    registrationBean.setUrlPatterns(Arrays.asList(&quot;hello&quot;, &quot;/myServlet&quot;));
-    return registrationBean;
-}
-
-//注册listener
-@Bean
-public ServletListenerRegistrationBean myListener() {
-    ServletListenerRegistrationBean&lt;Mylistener&gt; registrationBean =
-            new ServletListenerRegistrationBean&lt;Mylistener&gt;(new Mylistener());
-    return registrationBean;
-}
-
-
-//嵌入式Servlet配置
-@Bean
-public WebServerFactoryCustomizer webServerFactoryCustomizer() {
-    return new WebServerFactoryCustomizer&lt;ConfigurableServletWebServerFactory&gt;() {
-        @Override
-        public void customize(ConfigurableServletWebServerFactory factory) {
-            factory.setPort(8090);
-        }
-    };
-}
-</code></pre><p>}</p>
-<pre><code>&lt;!--more--&gt;  
-
-### 切换其他Servlet容器
-Jetty(长连接)，比如两用户持续聊天  
-Undertow不支持JSP，高并发非阻塞  
-****************************************************
-默认支持Tomcat，Jetty, Undertow, 切换时候更换相关的dependency就行了  
-### 使用外置的Servlet容器
-
-1. 必须创建一个war项目
-2. 将嵌入式的Tomcat指定为provided
-
-``` propertities
-
+</code></pre>
+<!--more-->  
+<h3 id="切换其他Servlet容器"><a href="#切换其他Servlet容器" class="headerlink" title="切换其他Servlet容器"></a>切换其他Servlet容器</h3><p>Jetty(长连接)，比如两用户持续聊天<br>Undertow不支持JSP，高并发非阻塞  </p>
+<hr>
+<p>默认支持Tomcat，Jetty, Undertow, 切换时候更换相关的dependency就行了  </p>
+<h3 id="使用外置的Servlet容器"><a href="#使用外置的Servlet容器" class="headerlink" title="使用外置的Servlet容器"></a>使用外置的Servlet容器</h3><ol>
+<li>必须创建一个war项目</li>
+<li>将嵌入式的Tomcat指定为provided</li>
+</ol>
+<pre><code class="propertities">
 &lt;dependency&gt;
     &lt;groupId&gt;org.soringframework.boot&lt;/groupId&gt;
     &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
     &lt;scope&gt;provided&lt;/scope&gt;
 &lt;/dependency&gt;
 
-</code></pre><ol start="3">
+</code></pre>
+<ol start="3">
 <li>必须编写一个SpringBootServletInitializer的子类，并调用configure方法</li>
 </ol>
 <pre><code class="java">
