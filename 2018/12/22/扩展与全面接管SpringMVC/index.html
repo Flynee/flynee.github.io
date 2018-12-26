@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/Flynee">
   <title>扩展与全面接管SpringMVC | 魔宫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="扩展SpringMVC编写一个配置类(@Configration),是WebMvcConfigrerAdapter类型：不能标注@EnableWebMvc     @Configuration既保留了当前的配置，也能用我们扩展的配置` java//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了//使用webMvcConfigurerAdapter可以来扩展Sprin">
+  <meta name="description" content="扩展SpringMVC编写一个配置类(@Configration),是WebMvcConfigrerAdapter类型：不能标注@EnableWebMvc     @Configuration既保留了当前的配置，也能用我们扩展的配置   1234567891011121314//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了//使用webMvcConfigurerA">
 <meta name="keywords" content="springboot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="扩展与全面接管SpringMVC">
 <meta property="og:url" content="https://github.com/Flynee/2018/12/22/扩展与全面接管SpringMVC/index.html">
 <meta property="og:site_name" content="魔宫">
-<meta property="og:description" content="扩展SpringMVC编写一个配置类(@Configration),是WebMvcConfigrerAdapter类型：不能标注@EnableWebMvc     @Configuration既保留了当前的配置，也能用我们扩展的配置` java//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了//使用webMvcConfigurerAdapter可以来扩展Sprin">
+<meta property="og:description" content="扩展SpringMVC编写一个配置类(@Configration),是WebMvcConfigrerAdapter类型：不能标注@EnableWebMvc     @Configuration既保留了当前的配置，也能用我们扩展的配置   1234567891011121314//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了//使用webMvcConfigurerA">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-22T08:15:12.937Z">
+<meta property="og:updated_time" content="2018-12-26T01:05:30.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="扩展与全面接管SpringMVC">
-<meta name="twitter:description" content="扩展SpringMVC编写一个配置类(@Configration),是WebMvcConfigrerAdapter类型：不能标注@EnableWebMvc     @Configuration既保留了当前的配置，也能用我们扩展的配置` java//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了//使用webMvcConfigurerAdapter可以来扩展Sprin">
+<meta name="twitter:description" content="扩展SpringMVC编写一个配置类(@Configration),是WebMvcConfigrerAdapter类型：不能标注@EnableWebMvc     @Configuration既保留了当前的配置，也能用我们扩展的配置   1234567891011121314//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了//使用webMvcConfigurerA">
   
     <link rel="alternative" href="/atom.xml" title="魔宫" type="application/atom+xml">
   
@@ -166,15 +166,9 @@
         <h3 id="扩展SpringMVC"><a href="#扩展SpringMVC" class="headerlink" title="扩展SpringMVC"></a>扩展SpringMVC</h3><p>编写一个配置类(@Configration),是WebMvcConfigrerAdapter类型：不能标注@EnableWebMvc  </p>
 <hr>
 <ol>
-<li>@Configuration既保留了当前的配置，也能用我们扩展的配置<br><code>`</code> java<br>//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了<br>//使用webMvcConfigurerAdapter可以来扩展SpringMVC的功能<br>@Configuration<br>public class MyConfig extends WebMvcConfigurationSupport {</li>
+<li>@Configuration既保留了当前的配置，也能用我们扩展的配置 </li>
 </ol>
-<pre><code>@Override
-public void addViewControllers(ViewControllerRegistry registry) {
-    //设置浏览器请求/me 跳转到success页面
-    registry.addViewController(&quot;/me&quot;).setViewName(&quot;success&quot;);
-}
-</code></pre><p>}</p>
-<p><code>`</code>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@EnableWebMvc //Web模块的SpringMVC自动配置都失效了</span></span><br><span class="line"><span class="comment">//使用webMvcConfigurerAdapter可以来扩展SpringMVC的功能</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurationSupport</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addViewControllers</span><span class="params">(ViewControllerRegistry registry)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//设置浏览器请求/me 跳转到success页面</span></span><br><span class="line">        registry.addViewController(<span class="string">"/me"</span>).setViewName(<span class="string">"success"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>如果在@Configuration之上加@EnableWebMvc,SpringBoot的自动配置就不能用了，所有配置都得我们自己写  </li>
 </ol>
