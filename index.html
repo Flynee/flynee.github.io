@@ -140,6 +140,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-springboot高级" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/27/springboot高级/">springboot高级</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/27/springboot高级/" class="archive-article-date">
+  	<time datetime="2018-12-27T06:15:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="springboot缓存"><a href="#springboot缓存" class="headerlink" title="springboot缓存"></a>springboot缓存</h3><p>在注解中配置几个相关的属性  </p>
+<ol>
+<li>@Cacheable  </li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EmployneeService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    EmployneeMapper employneeMapper;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将方法的运行结果进行缓存;</span></span><br><span class="line"><span class="comment">     * 以后再要相同的数据直接从缓存中获取，不用调用此方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * CacheManager管理多个Cache组件，对缓存的真正CURD操作在Cache组件中，每一个组件有自己唯一一个名字</span></span><br><span class="line"><span class="comment">     * Cacheable几个属性</span></span><br><span class="line"><span class="comment">     *          cacheNames/value:指定缓存组件的名称,将方法的返回结果放在哪个缓存中，是数组的方式，可以指定多个缓存</span></span><br><span class="line"><span class="comment">     *          key:缓存数据使用的key,可以用它来指定。默认使用方法的参数作为key。如key = "#root.methodName+'['+#id+']'</span></span><br><span class="line"><span class="comment">     *          keyGenerator:key的生成器，可以自己指定key的生成器组件id，key/keyGenerator二选一使用</span></span><br><span class="line"><span class="comment">     *          cacheManager:指定缓存管理器，或者cacheResolver指定获取解析器</span></span><br><span class="line"><span class="comment">     *          condition：指定符合条件下缓存</span></span><br><span class="line"><span class="comment">     *          unless:否定缓存，当unless指定条件为true，方法的返回值不会被缓存，可以获取到结果进行判断</span></span><br><span class="line"><span class="comment">     *          指定key的时候，除了直接在注解了写，也可以通过配置类配置</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">	 *sync:是否使用异步方式，当sync为true时，unless不可用</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Cacheable</span>(cacheNames = &#123;<span class="string">"emp"</span>&#125;, condition = <span class="string">"#id&gt;0"</span>, unless = <span class="string">"#result == null"</span>, key = <span class="string">"#root.methodName+'['+#id+']'"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employnee <span class="title">getEmp</span><span class="params">(Integer id)</span></span>&#123;</span><br><span class="line">        Employnee employnee = employneeMapper.getEmpById(id);</span><br><span class="line">        <span class="keyword">return</span> employnee;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/12/27/springboot高级/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/27/springboot高级/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Vimuim使用方法" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -1048,93 +1128,6 @@ server.tomcat.xxx
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/12/22/引入web静态资源/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-引入thymeleaf" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/22/引入thymeleaf/">引入thymeleaf</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/22/引入thymeleaf/" class="archive-article-date">
-  	<time datetime="2018-12-22T08:06:23.909Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="thymeleaf模板引擎"><a href="#thymeleaf模板引擎" class="headerlink" title="thymeleaf模板引擎"></a>thymeleaf模板引擎</h3><p>当springboot的打包方式为jar时，并且用的是嵌入式的Tomcat，因此它默认不支持jsp  </p>
-<h3 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h3><p>模板引擎有JSP、Velocity、Freemaker、Thymeleaf、springboot推荐thymeleaf,他语法简单功能强大  </p>
-<hr>
-<ol>
-<li>引入thymeleaf模板  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//切换springboot默认提供的版本</span><br><span class="line"></span><br><span class="line">    &lt;properties&gt;</span><br><span class="line">        &lt;java.version&gt;1.8&lt;/java.version&gt;</span><br><span class="line">        &lt;!--thymeleaf版本--&gt;</span><br><span class="line">        &lt;thymeleaf.version&gt;3.0.11.RELEASE&lt;/thymeleaf.version&gt;</span><br><span class="line">        &lt;!--thymeleaf3主程序需要layout2以上的版本--&gt;</span><br><span class="line">        &lt;!--thymeleaf2 对应layout1--&gt;</span><br><span class="line">        &lt;thymeleaf-layout-dialect.version&gt;2.3.0&lt;/thymeleaf-layout-dialect.version&gt;</span><br><span class="line">    &lt;/properties&gt;</span><br><span class="line">```  </span><br><span class="line">2. thymeleaf使用&amp;语法  </span><br><span class="line">``` java</span><br><span class="line">@ConfigurationProperties(</span><br><span class="line">    prefix = &quot;spring.thymeleaf&quot;</span><br><span class="line">)</span><br><span class="line">public class ThymeleafProperties &#123;</span><br><span class="line">    private static final Charset DEFAULT_ENCODING;</span><br><span class="line">    public static final String DEFAULT_PREFIX = &quot;classpath:/templates/&quot;;</span><br><span class="line">    public static final String DEFAULT_SUFFIX = &quot;.html&quot;;</span><br><span class="line">    </span><br><span class="line">    //只要把.html放在classpath:/templates/目录下，thymeleaf就能自动渲染了</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>1）导入thymeleaf的名称空间xmlns:th=”<a href="http://www.thymeleaf.org（提供语法提示功能）" target="_blank" rel="noopener">http://www.thymeleaf.org（提供语法提示功能）</a><br>2）使用thymeleaf语法  </p>
-<pre><code class="html">
-<span class="tag">&lt;<span class="name">body</span>&gt;</span>
-    <span class="comment">&lt;!--将div中的文本内容设置为后台传输过来的值--&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"${haha}"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">body</span>&gt;</span>
-</code></pre>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/22/引入thymeleaf/">展开全文 >></a>
         </p>
       
 
